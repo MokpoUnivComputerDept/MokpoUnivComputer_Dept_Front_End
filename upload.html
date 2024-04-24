@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+</head>
+<body>
+    <!--파일 업로드 하는 대충의 HTML-->
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="button" onclick="uploadFile()">Upload</button>
+    </form>
+<!--자바스크립트-->
+    <script>
+        //파일 및 사진 업로드 처리를 위해 uploadFile 함수 정의
+        function uploadFile() {
+            //FormData객체 생성 
+            //FormData는 웹에서 form필드에서 데이터 쉽게 수집하고 multipart/form-data 형식으로 비동기적으로
+            //전송해주는 javascript 인터페이스
+            //FormData는 파일 업로드와 같이 복잡한 데이터 구조를 쉽게 서버에 전송시킬 수 있도록 해준다.
+            var formData = new FormData(document.getElementById('uploadForm'));
+            //백엔드 서버에 POST메소드로 전달 , POST -> 폼 데이터 및 파일을 서버로 전송할 때 씀.
+            fetch('http://localhost:8080/upload', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => console.error('Error:', error));
+            
+        }
+    </script>
+</body>
+</html>
