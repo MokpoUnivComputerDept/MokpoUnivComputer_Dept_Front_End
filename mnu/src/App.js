@@ -7,25 +7,6 @@ import Notice from './notice/Notice'
 const {Subject, Search, Page} = Notice
 
 
-
-// function App() {
-//   return (
-//     <div>
-//       <BrowserRouter>
-//         <Subject/>
-//         <Search/>
-//         <Routes>
-
-          
-//         </Routes>
-//       </BrowserRouter>
-//       <Posting />
-//     </div>
-//   );
-// }
-
-
-
 function App() {
   return (
     <div>
