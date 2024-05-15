@@ -1,0 +1,245 @@
+body {
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto DemiLight',sans-serif;
+    line-height: 1.4;
+    font-size: 18px;
+    color: #333;
+    letter-spacing: 0;
+    word-wrap: break-word;
+}
+.wrap_major_7 dt{
+    font-size: 20pt;
+    color: #004098;
+    font-weight: 600;
+}
+.wrap_major_5 dt {
+    width: 300px;
+    font-size: 22px;
+    color: #FFF;
+    text-align: center;
+    background: #014099;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.bold{
+    font-weight: 600;
+}
+.wrap_major_5 dt {
+    padding: 20px 30px;
+}
+.wrap_major_5 dd {
+    padding: 20px 30px;
+    
+}
+.wrap_major_5 dt {
+    width: 250px;
+}
+.wrap_major_5 dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 30pt;
+    margin-left: 50pt;
+    max-width: 100%;
+    position: relative;
+}
+.wrap_major_5 .container {
+    max-width: 96%;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap_major_7 {
+    background: url(images/nMajorQna_bg.png) no-repeat right bottom;
+    background-image: url(images/nMajorQna_bg.png);
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    padding-bottom: 200px;
+}
+.wrap_major_7.container {
+    max-width: 96%;
+}
+.wrap_major_7.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.wrap_major_5 .container{
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.objHeading_h2:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(/sites/style_guide/images/common/h3_icon.png) no-repeat center;
+    margin: 0 5px 15px 0;
+}
+.majorMainName{
+    margin-top: 60pt;
+    color: #333333;
+    display: flex;
+    font-family:monospace;
+    justify-content: center;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+p{
+    line-height: 0.2;
+    font-family: 'Noto DemiLight',sans-serif;
+    margin-left: 50px;
+}
+.textMiddle{
+    font-family: monospace;
+    font-size: 30px;
+    margin-left: 50px;
+    text-align: left;
+    justify-content: left;
+    font-weight: 600;
+}
+.textMiddle1{
+    margin-left: 50px;
+    font-size: 40px;
+    text-align: left;
+    justify-content: left;
+    font-weight: 600;
+    color: #004098;
+}
+.container{
+    display: flex;
+    align-items: flex-start;
+}
+.imageContainer{
+    order:2;
+    flex: 0 0 auto;
+    margin-right:20px;
+    margin-left:20px
+}
+.textContainer{
+    order: 1;
+    flex:1;
+    font-size: 17px;
+    color: #363636;
+}
+.mainPicture{
+    width: 100%;
+    height: auto;
+    background-image: url('images/main_picture.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.NumAndLoc{
+    background-color: #FBFBFB;
+}
+dl{
+    align-items: center;
+    display: flex;
+    height: 70px;
+}
+.wrap_major_7 dl {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 30px 0;
+    position: relative;
+    margin-left: 50pt;
+    padding-bottom: 50pt;
+    
+}
+table {
+    text-align: center;
+    width: 70%;
+    margin-left: 100px;
+    border-collapse:collapse;
+    border-top: 2px solid #004594; /* 위쪽 테두리 추가 */
+    border-bottom: 1px solid #DDDEE0; /* 아래쪽 테두리 추가 */
+}
+td{
+    border-top: 1px solid #DDDEE0; /* 셀의 위쪽 테두리 */
+    border-bottom: 1px solid #DDDEE0; /* 셀의 아래쪽 테두리 */
+}
+
+.overlayText {
+    position: absolute;
+    top: 50%; /* 상단에서부터 50% 위치에 */
+    left: 50%; /* 좌측에서부터 50% 위치에 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    color: white; /* 텍스트 색상 */
+    font-size: 30px; /* 텍스트 크기 */
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px; /* 패딩 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    text-decoration: none; /* 텍스트 밑줄 없애기 */
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 80pt;
+    cursor: pointer;
+    border: 1px solid #C5C5C5;
+    transition: 0.3s;
+}
+.button1 {
+    margin-top: 20pt;
+    background-color: white; /* 녹색 배경 */
+    color: black;
+    padding: 10px 20px; /* 패딩 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    text-decoration: none; /* 텍스트 밑줄 없애기 */
+    display: inline-block; /* 인라인-블록 디스플레이 */
+    font-size: 20px; /* 폰트 크기 */
+    margin-left: 20pt;
+    cursor: pointer; /* 커서 포인터로 설정 */
+    border: 1px solid #C5C5C5;
+    transition: 0.3s;
+}
+/* 호버 효과 */
+.button:hover {
+    background-color: #EEEEEE; 
+}
+.button1:hover {
+    background-color: #EEEEEE;
+}
+.objHeading_h2{
+    margin-top: 58px;
+    margin-left: 100px;
+    font-size: 28px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Noto DemiLight',sans-serif;
+    font-weight: 400;
+    
+}
+
+.objHeading_h2:before {
+    content: url(images/h3_icon.png) no-repeat center;
+    background: url(images/h3_icon.png) no-repeat center;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 5px 15px 0;
+}
+::before,:before{
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
