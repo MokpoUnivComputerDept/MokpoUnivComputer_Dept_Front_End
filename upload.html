@@ -23,8 +23,11 @@
                 method: 'POST',
                 body: formData,
             })
+            //서버로 부터 응답 text로 받음
             .then(response => response.text())
+            //서버응답 출력
             .then(data => alert(data))
+            //오류 발생 시 오류 콘솔에 출력
             .catch(error => console.error('Error:', error));
             
         }
