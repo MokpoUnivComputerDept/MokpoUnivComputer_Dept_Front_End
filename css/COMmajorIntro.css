@@ -231,12 +231,13 @@ td{
 }
 
 .objHeading_h2:before {
-    content: url(images/h3_icon.png) no-repeat center;
-    background: url(images/h3_icon.png) no-repeat center;
+    content: "";
+    background: url(../images/h3_icon.png) no-repeat center;
     display: inline-block;
     width: 16px;
     height: 16px;
     margin: 0 5px 15px 0;
+    z-index: 3;
 }
 ::before,:before{
     box-sizing: border-box;
