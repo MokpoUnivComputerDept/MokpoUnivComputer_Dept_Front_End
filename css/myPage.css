@@ -1,5 +1,3 @@
-/* CSS 코드 시작 */
-
 body {
     word-break: break-all;
 }
@@ -101,48 +99,39 @@ div {
         margin-top: 252px;
     }
 }
-
-table {
-    width: 80%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    table-layout: fixed; /* 고정된 테이블 레이아웃 사용 */
+th:nth-child(1), td:nth-child(1) {
+    width: 20%; /* 첫 번째 열: 작성일자 */
+}
+th:nth-child(2), td:nth-child(2) {
+    width: 60%; /* 두 번째 열: 글제목 */
+}
+th:nth-child(3), td:nth-child(3) {
+    width: 20%; /* 세 번째 열: 게시판 */
+}
+th:nth-child(4), td:nth-child(4) {
+    width: 20%; /* 세 번째 열: 게시판 */
 }
 
+
+table{
+    width:80%;
+    border-collapse: collapse;
+    margin : 0 auto;
+}
 th, td {
     border: 1px solid #ddd; /* 셀 경계 */
     padding: 8px; /* 셀 패딩 */
-    text-align: left; /* 텍스트 정렬 */
-    word-wrap: break-word; /* 텍스트 자동 줄바꿈 */
+    text-align: middle; /* 텍스트 정렬 */
 }
-
 th {
     background-color: #f2f2f2; /* 헤더 행 배경색 */
 }
-
-th:nth-child(1), td:nth-child(1) {
-    width: 15%; /* 첫 번째 열: 작성일자 */
-}
-
-th:nth-child(2), td:nth-child(2) {
-    width: 50%; /* 두 번째 열: 글제목 */
-}
-
-th:nth-child(3), td:nth-child(3) {
-    width: 20%; /* 세 번째 열: 작성자 */
-}
-
-th:nth-child(4), td:nth-child(4) {
-    width: 15%; /* 네 번째 열: 조회수 */
-}
-
 .line {
     width: 80%; /* 선의 너비 설정 */
     height: 2px; /* 선의 높이 설정 */
     background-color: #004594; /* 선의 색상 설정 */
     margin: 20px auto; /* 선 위아래로 여백 설정, 가운데 정렬 */
 }
-
 .page_title {
     background: #FFF;
     padding: 50px 0;
@@ -191,6 +180,13 @@ article {
     position: absolute;
 }
 
+.main h1{
+    z-index: 1;
+    margin: 20px auto;
+    margin-left: 10%;
+    position: absolute;
+}
+
 .container {
     position: relative;
     padding-top: 550px;
@@ -204,4 +200,3 @@ p {
     margin-inline-end: 0px;
     unicode-bidi: isolate;
 }
-/* CSS 코드 끝 */
