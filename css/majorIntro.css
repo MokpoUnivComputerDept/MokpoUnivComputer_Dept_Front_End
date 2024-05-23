@@ -68,7 +68,7 @@ dt{
     content: "";
     display: inline-block;
     width: 16px;
-    height: 16px;
+    height: 30px;
     background: url(../images/h3_icon.png) no-repeat center;
     margin: 0 5px 15px 0;
 }
@@ -142,8 +142,8 @@ p{
 }
 .mainPicture{
     width: 100%;
-    height: auto;
-    background-image: url('images/main_picture.png');
+    height: 30%;
+    background-image: url('../images/main_picture.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -359,11 +359,16 @@ div {
         margin-top: 252px;
     }
 }
-
-table {
-    width: 80%;
+.textContainer table{
+    width: 50%;
     border-collapse: collapse;
-    margin: 0 auto;
+    table-layout: fixed; /* 고정된 테이블 레이아웃 사용 */
+}
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-left: 10px;
+    margin: 0 0 0 99px;
     table-layout: fixed; /* 고정된 테이블 레이아웃 사용 */
 }
 
@@ -440,7 +445,7 @@ article {
     unicode-bidi: isolate;
 }
 .main{
-    z-index: 1;
+    z-index: -1;
     display: block;
     width: 100%;
     height: 100%;
@@ -451,7 +456,7 @@ article {
 
 .container {
     position: relative;
-    padding-top: 550px;
+    padding-top: 30px;
      /* 필요한 경우 padding-top을 조정 */
 }
 p {
