@@ -100,16 +100,16 @@ div {
     }
 }
 th:nth-child(1), td:nth-child(1) {
-    width: 20%; /* 첫 번째 열: 작성일자 */
+    width: 10%; /* 첫 번째 열: 작성일자 */
 }
 th:nth-child(2), td:nth-child(2) {
-    width: 60%; /* 두 번째 열: 글제목 */
+    width: 70%; /* 두 번째 열: 글제목 */
 }
 th:nth-child(3), td:nth-child(3) {
-    width: 20%; /* 세 번째 열: 게시판 */
+    width: 10%; /* 세 번째 열: 게시판 */
 }
 th:nth-child(4), td:nth-child(4) {
-    width: 20%; /* 세 번째 열: 게시판 */
+    width: 10%; /* 네 번째 열: 조회수 */
 }
 
 
