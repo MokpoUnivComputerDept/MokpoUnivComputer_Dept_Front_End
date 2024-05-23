@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css"/>
+        <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="title">
+            <h1>게시글 작성</h1>
+        </div>
+
+        <div id="editor" class="editor"></div>
+        <button id="save" class="button">저장하기</button>
+
+        <input type="file" id="multipartInput">
+        <button id="multipartInputBtn">파일 업로드</button>
+        <!-- <button id="abortUploadBtn">업로드 중단</button> -->
+        <hr>
+
+        <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+        <script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight-all.min.js"></script>
+        <script src="noticeCreate.js"></script>
+        
+    </body>
+</html>

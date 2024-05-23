@@ -1,0 +1,41 @@
+.body {
+    height: 100vh;
+    background-color: #212121;
+    margin: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.h1, input {
+    color: rgb(202, 202, 202);
+}
+
+
+.hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.title{
+    text-align: center;    /* 텍스트 가운데 정렬 */
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.editor {
+    text-align: center;
+    border: 1.5px solid;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    float: right;
+}
