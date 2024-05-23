@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./curriculum.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+        $("#nav").load("/nav.html");
+        $("#footers").load("/footer.html");
+        $("#temp").load("/temp.html"); 
+        });
+        $(function(){
+            $("html, body").animate({ scrollTop: 0 }, "fast"); 
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var buttons = document.querySelectorAll('.pageNavigationBtn');
+
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var siblingUl = button.nextElementSibling;
+                    if (siblingUl.style.display === 'none' || siblingUl.style.display === '') {
+                        siblingUl.style.display = 'block';
+                    } else {
+                        siblingUl.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // JavaScript to handle scrolling behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll to top when the page is loaded
+
+            // Get the wrap_page_func element
+            let myDiv = document.querySelector('.wrap_page_func');
+            let goTop = document.querySelector('.goTop');
+            let lastScrollTop = 0;
+
+            // Add scroll event listener to handle hiding/showing the element
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop === 0) {
+                    // At the top of the page
+                    myDiv.classList.remove('hidden');
+                    goTop.classList.add('hidden');
+                } else {
+                    // Not at the top of the page
+                    myDiv.classList.add('hidden');
+                    goTop.classList.remove('hidden');
+                }
+
+                lastScrollTop = scrollTop; // Update last scroll position
+            });
+        });
+        goTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    </script>
+    <title>Document</title>
+</head>
+<body class="sub _responsiveObj sub type_1 page16802 college_templet_04 Desktop _msMain eQ03" cz-shortcut-listen="true">
+	<!--서브비주얼-->
+    <div id="nav"></div>
+	<div class="wrap_sub_visual">
+        <a href="/cs/16799/subview.do" class="prev" target="_self">전공소개</a>
+        <a href="/cs/16806/subview.do" class="next" target="_self">커뮤니티</a>
+        <div class="container">
+            <p class="visual_intro"><strong>교과과정</strong><span>구성원의 자긍심이 넘치는 행복한 대학</span></p>
+        </div>
+	</div>
+	<!--서브비주얼-->
+
+	<!--페이지기능-->
+	<div class="wrap_page_func">
+        <div class="container">
+            <!--UTIL-->
+            <!--UTIL-->	  		
+            <!--SNB-->
+            <div class="sub_navi">
+            <ul>
+                <li class="home"><a href="#none">홈으로</a></li>
+                <li id="pagetitle1"><button class="pageNavigationBtn" title="펼치기">교과과정</button><ul class="pageNavigation" style="display: none;"><li><a href="/cs/16795/subview.do" target="_self">학부소개</a></li><li><a href="/cs/16799/subview.do" target="_self">전공소개</a></li><li><a href="/cs/16802/subview.do" target="_self">교과과정</a></li><li><a href="/cs/16806/subview.do" target="_self">커뮤니티</a></li><li><a href="/cs/16809/subview.do" target="_self">이용안내</a></li></ul></li>
+                <li id="pagetitle2"><button class="pageNavigationBtn" title="펼치기">컴퓨터공학전공 교과과정</button><ul class="pageNavigation" style="display: none;"><li><a href="/cs/16802/subview.do" target="_self">컴퓨터공학전공 교과과정</a></li><li><a href="/cs/16803/subview.do" target="_self">융합소프트웨어전공 교과과정</a></li><li><a href="/cs/16804/subview.do" target="_self">정보보호전공 교과과정</a></li><li><a href="/cs/16871/subview.do" target="_self">1학년 공통 교과과정</a></li><li><a href="/liberal/6095/subview.do" target="_blank">교양과정</a></li></ul></li>
+                
+            </ul>
+            </div>
+            <!--SNB-->
+        </div>
+	</div>
+	<!--페이지기능-->
+
+	<!--바디-->
+	<div class="wrap_contents">
+	  <div class="container">
+		<!--탭메뉴-->
+		<div class="tab">
+            <nav id="menuUItab" class="menuUItab ">
+                <div class="hidden">
+                    fnctId=sitemenu,menuViewType=tab
+                </div>  
+            </nav>
+		</div>
+		<!--탭메뉴-->
+		<!--타이틀-->
+		<div class="page_title">
+		  <h1>컴퓨터공학전공 교과과정</h1>
+		</div>
+		<!--타이틀-->		
+		<!--컨텐츠-->
+		<div class="contents" id="bContents" tabindex="0">
+		    <div id="contentsEditHtml">
+	            <input type="hidden" id="siteIdVal" value="cs">
+                <div class="contntMaster">
+                    /WEB-INF/jsp/k2web/com/cop/site/layout.jsp<br>
+                    cs_JW_MS_K2WT001_S
+                </div>
+	            <input type="hidden" id="pathMenuSeqs" value="15352,16792,16802">
+	            <input id="editMode" type="hidden" value="GENERAL">
+	            <article id="_contentBuilder" class="_contentBuilder _k2__WiZaRd_general">
+                    <div class="_obj _objHtml _absolute" id="menu16802_obj38" style=""> 
+                        <div class="wrap_major_4"> 
+                            <div class="container"> 
+                                <h2 class="objHeading_h2">교과과정</h2> 
+                                    <div class="table_1"> 
+                                        <table> 
+                                            <caption>
+                                                학년, 교과과정 
+                                            </caption> 
+                                            <colgroup> 
+                                                <col style="width:20%;"> 
+                                                <col style="width:20%;"> 
+                                                <col style=""> 
+                                            </colgroup> 
+                                            <tbody> 
+                                                <tr> 
+                                                    <th>학년</th> 
+                                                    <th>목적</th> 
+                                                    <th>교과과정</th> 
+                                                </tr> 
+                                                <tr> 
+                                                    <td>1~2 학년</td> 
+                                                    <td>기본 지식 학습</td> 
+                                                    <td class="left">파이썬프로그래밍, C프로그래밍, 컴퓨터공학개론및실습, 디지털이해와응용, 데이터구조, 컴퓨터구조, 리눅스및네트워크실습</td> 
+                                                </tr> 
+                                                <tr> 
+                                                    <td>2~3학년</td> 
+                                                    <td>전문 분야 탐색 및 응용능력 향상</td> 
+                                                    <td class="left">객체지향프로그래밍, 웹프로그래밍, 프로그래밍기초프로젝트, 소프트웨어공학, 데이터베이스, 운영체제</td> 
+                                                </tr> 
+                                                <tr> 
+                                                    <td>3~4학년</td> 
+                                                    <td>전문 지식과 실무 능력 강화</td> 
+                                                    <td class="left">데이터통신, 기계학습및딥러닝, 영상처리, 데이터베이스응용, 휴먼컴퓨터인터페이스, 인공지능응용시스템, 가상증강현실</td> 
+                                                </tr> 
+                                                <tr> 
+                                                    <td>4학년</td> 
+                                                    <td>산업체맞춤형 실무능력 강화</td> 
+                                                    <td class="left">임베디드시스템응용, 미래IT기술특강, 컴퓨터보안, 빅데이터분석및시각화,모바일컴퓨팅및응용, 빅데이터서비스</td> 
+                                                </tr> 
+                                            </tbody> 
+                                        </table> 
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div>
+	                </article>
+                </div>
+		    </div>
+		<!--컨텐츠-->
+        </div>
+    </div>
+    <div id="footers"></div>
+    <div id="temp"></div>
+	<!--바디-->
+	<div class="goTop"><a href="#">맨위로</a></div>
+	<!--고탑-->
+
+</body>
+</html>

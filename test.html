@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./test.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+        $("#footers").load("/footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+        $("#temp").load("/temp.html");  // 원하는 파일 경로를 삽입하면 된다
+        
+        
+        });
+        </script>
+         
+    <title>Document</title>
+</head>
+<body>
+    <div id="footers"></div>
+    <div id="temp"></div>
+    
+
+</body>
+</html>

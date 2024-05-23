@@ -1,0 +1,355 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sitemap.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+        $("#nav").load("/nav.html");
+        $("#footers").load("/footer.html");
+        $("#temp").load("/temp.html"); 
+        });
+        $(function(){
+            $("html, body").animate({ scrollTop: 0 }, "fast"); 
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var buttons = document.querySelectorAll('.pageNavigationBtn');
+
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var siblingUl = button.nextElementSibling;
+                    if (siblingUl.style.display === 'none' || siblingUl.style.display === '') {
+                        siblingUl.style.display = 'block';
+                    } else {
+                        siblingUl.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // JavaScript to handle scrolling behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll to top when the page is loaded
+            window.scrollTo(0, 0);
+
+            // Get the wrap_page_func element
+            let myDiv = document.querySelector('.wrap_page_func');
+
+            // Check if the element exists
+            if (!myDiv) {
+                console.error('Element with class "wrap_page_func" not found.');
+                return;
+            }
+
+            let lastScrollTop = 0;
+
+            // Add scroll event listener to handle hiding/showing the element
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop === 0) {
+                    // At the top of the page
+                    myDiv.classList.remove('hidden');
+                } else {
+                    // Not at the top of the page
+                    myDiv.classList.add('hidden');
+                }
+
+                lastScrollTop = scrollTop; // Update last scroll position
+            });
+        });
+    </script>
+         
+    <title>Document</title>
+</head>
+<body class="sub _responsiveObj sub type_1 page16810 college_templet_04 Desktop _msMain eQ05" cz-shortcut-listen="true">
+
+	<!--헤더-->
+    <div id="nav"></div>
+	<!--서브비주얼-->
+    <div class="wrap_sub_visual">
+        <a href="/cs/16806/subview.do" class="prev" target="_self">커뮤니티</a>
+        <a href="#none" class="next" style="display: none;"></a>
+        <div class="container">
+            <p class="visual_intro"><strong>이용안내</strong><span>구성원의 자긍심이 넘치는 행복한 대학</span></p>
+        </div>
+    </div>
+	<!--서브비주얼-->
+
+	<!--페이지기능-->
+	<div class="wrap_page_func">
+	  <div class="container">		
+		<!--SNB-->
+		<div class="sub_navi">
+		  <ul>
+			<li class="home"><a href="#none">홈으로</a></li>
+			<li id="pagetitle1">
+                <button class="pageNavigationBtn" title="펼치기">이용안내</button>
+                <ul class="pageNavigation" style="display: none;">
+                    <li>
+                        <a href="/cs/16795/subview.do" target="_self">학부소개</a>
+                    </li>
+                    <li>
+                        <a href="/cs/16799/subview.do" target="_self">전공소개</a>
+                    </li>
+                    <li>
+                        <a href="/cs/16802/subview.do" target="_self">교과과정</a>
+                    </li>
+                    <li>
+                        <a href="/cs/16806/subview.do" target="_self">커뮤니티</a>
+                    </li>
+                    <li>
+                        <a href="/cs/16809/subview.do" target="_self">이용안내</a>
+                    </li>
+                </ul>
+            </li>
+			<li id="pagetitle2">
+                <button class="pageNavigationBtn" title="펼치기">사이트맵</button>
+                <ul class="pageNavigation" style="display: none;">
+                    <li>
+                        <a href="/cs/16809/subview.do" target="_self">로그인</a>
+                    </li>
+                    <li>
+                        <a href="/cs/16810/subview.do" target="_self">사이트맵</a>
+                    </li>
+                </ul>
+            </li>		
+		  </ul>
+		</div>
+		<!--SNB-->
+	  </div>
+	</div>
+	<!--페이지기능-->
+
+	<!--바디-->
+	<div class="wrap_contents">
+	    <div class="container">
+            <!--탭메뉴-->
+            <div class="tab">
+                <nav id="menuUItab" class="menuUItab ">
+                    <div class="hidden">
+                        fnctId=sitemenu,menuViewType=tab
+                    </div>
+                </nav>
+            </div>
+            <!--탭메뉴-->
+            <!--타이틀-->
+            <div class="page_title">
+            <h1>사이트맵</h1>
+            </div>
+            <!--타이틀-->		
+            <!--컨텐츠-->
+            <div class="contents" id="bContents" tabindex="0">
+                <div id="contentsEditHtml">
+                    <input type="hidden" id="siteIdVal" value="cs">
+                    <div class="contntMaster">
+                        /WEB-INF/jsp/k2web/com/cop/site/layout.jsp<br>
+                        cs_JW_MS_K2WT001_S
+                    </div>
+                <input type="hidden" id="pathMenuSeqs" value="15352,16794,16810">
+                <input id="editMode" type="hidden" value="GENERAL">
+        
+                <article id="_contentBuilder" class="_contentBuilder _k2__WiZaRd_general">
+                    <div class="_obj _objWidget _active" id="menu16810_obj30" style=""> 
+                        <div class="hidden widgetInfo">
+                            fnctId=sitemap,fnctNo=0 
+                        </div>
+                        <div id="newSitemap" class="_fnctWrap">
+                            <ul class="_stMpUl"> 
+                                <li>
+                                    <div class="_stMpWrap">
+                                        <a target="_self" href="/cs/16795/subview.do" class="stMp_Title"> 
+                                            학부소개
+                    
+                                        </a> 
+                                        <ul>
+                                            <li>   
+                                                <a target="_self" href="/cs/16795/subview.do">
+                                                    컴퓨터학부 소개
+                                                </a>
+                                                <ul>    
+                                                </ul>
+                                            </li>
+                                            <li>   
+                                                <a target="_self" href="/cs/16811/subview.do">
+                                                    교수진
+                                                </a>
+                                                <ul>    
+                                                    <li>
+                                                        <a target="_self" href="/cs/16811/subview.do">
+                                                            컴퓨터공학전공
+                                                        </a>	
+                                                    </li>
+                                                    <li>
+                                                        <a target="_self" href="/cs/16812/subview.do">
+                                                            융합소프트웨어전공
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a target="_self" href="/cs/16813/subview.do">
+                                                            정보보호전공	
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                        
+                                            </li>
+                                            <li>   
+                                                <a target="_self" href="/cs/16798/subview.do">
+                                                    찾아오시는길
+                                                </a>
+                                                <ul>    
+                                                </ul>
+                                            </li>
+                                        </ul>
+                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="_stMpWrap">
+                                        <a target="_self" href="/cs/16799/subview.do" class="stMp_Title"> 
+                                            전공소개
+                                        </a> 
+                                        <ul>					
+                                            <li>   
+                                                <a target="_self" href="/cs/16799/subview.do">
+                                                    컴퓨터공학전공
+                                                </a>
+                                                <ul>    
+                                                </ul>									
+                                            </li>
+                                            <li>   
+                                                <a target="_self" href="/cs/16800/subview.do">
+                                                    융합소프트웨어전공					
+                                                </a>
+                                                <ul>    											 
+                                                </ul>
+                                        
+                                            </li>
+                                            <li>   
+                                                <a target="_self" href="/cs/16801/subview.do">
+                                                    정보보호전공
+                                                </a>
+                                                <ul>    
+                                                </ul>
+                                        
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="_stMpWrap">
+                                        <a target="_self" href="/cs/16802/subview.do" class="stMp_Title"> 
+                                            교과과정
+                                        </a> 
+                                        <ul>
+                                            <li>   
+                                                <a target="_self" href="/cs/16802/subview.do">
+                                                    컴퓨터공학전공 교과과정
+                                                </a>
+                                                <ul>    
+                                                </ul>
+                                        
+                                            </li>
+                                            <li>   
+                                                <a target="_self" href="/cs/16803/subview.do">
+                                                    융합소프트웨어전공 교과과정
+                                                </a>
+                                                <ul>    
+                                                </ul>
+                                        
+                                            </li>
+                                            <li>   
+                                                <a target="_self" href="/cs/16804/subview.do">
+                                                    정보보호전공 교과과정
+                                                </a>
+                                                <ul>    
+                                                </ul>	
+                                            </li>
+                                            <li>   
+                                                <a target="_self" href="/cs/16871/subview.do">
+                                                    1학년 공통 교과과정
+                                                </a>
+                                                <ul>    
+                                                </ul>						
+                                            </li>
+                                            <li>   
+                                                <a target="_blank" href="/liberal/6095/subview.do" class="new_win">
+                                                    교양과정 
+                                                </a>
+                                                <ul>    
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="_stMpWrap">
+                                        <a target="_self" href="/cs/16806/subview.do" class="stMp_Title"> 
+                                            커뮤니티
+                                        </a> 
+                                        <ul>
+                                            <li>   
+                                                <a target="_self" href="/cs/16806/subview.do">
+                                                    공지사항									
+                                                </a>
+                                                <ul>    
+                                                </ul>
+                                            </li>
+                                            <li>   
+                                                <a target="_self" href="/cs/16807/subview.do">
+                                                    학부동향
+                                                </a>
+                                                <ul>    
+                                                </ul>
+                                        
+                                            </li>
+                                            <li>   
+                                                <a target="_self" href="/cs/16808/subview.do">
+                                                    포토갤러리
+                                                </a>
+                                                <ul>    
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="_stMpWrap">
+                                        <a target="_self" href="/cs/16809/subview.do" class="stMp_Title"> 
+                                            이용안내    
+                                        </a> 
+                                        <ul>
+                                            <li>   
+                                                <a target="_self" href="/cs/16809/subview.do">
+                                                    로그인
+                                                </a>
+                                                <ul>    
+                                                </ul>
+                                            </li>
+                                            <li>   
+                                                <a target="_self" href="/cs/16810/subview.do">
+                                                    사이트맵 
+                                                </a>
+                                                <ul>    
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul></ul>
+                        </div>
+                    </div>       
+                </article>
+            </div>
+        </div>
+        <!--컨텐츠-->
+    </div>
+    </div>
+    <div id="footers"></div>
+    <div id="temp"></div>
+    
+</body>
+</html>

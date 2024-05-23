@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <!-- <link rel="stylesheet" href="./globlafooter.css" /> -->
+  <link rel="stylesheet" href="./login.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans KR:wght@400&display=swap" />
+</head>
+<body onload="$('#loginId').focus();" cz-shortcut-listen="true">
+    <div id="wrap">
+         <div id="container_main">
+            <div id="content" class="login_bg">
+                <h1><span>국립목포대학교</span> 포털 로그인</h1>	    				
+                <div class="logRund_wrap">
+                    <div class="logRund">
+                        <h2>사용자 로그인<span>교내구성원 전용서비스로서 통합로그인(SSO)을 이용하여 정보서비스를 한번의<br> 로그인으로 이용하실 수 있습니다.</span></h2> 				
+                        <div class="tab_container">
+                            <div id="tab1" class="tab_content">
+                                <form id="loginForm" name="loginForm" method="post">
+                                    <input type="hidden" name="userSe" id="userSe" value="USR">	
+                                    <input type="hidden" name="message" id="message" value="">
+                                    <input type="hidden" name="loginFail5" id="loginFail5" value="0">
+                                    <input type="hidden" name="loginBlock" id="loginBlock" value="0">
+                                    <input type="hidden" name="returnUrl" id="returnUrl" value="cs.mokpo.ac.kr/member/cs/ssoCheck.do">
+
+                                    <input type="hidden" name="secureChannelLoginRequest" id="secureChannelLoginRequest">
+                                    <input type="hidden" name="dn" id="dn" value="">
+                                                                                                    
+                                    <fieldset class="login" id="loginField">
+                                        <legend>로그인하기</legend>
+                                        
+                                        <p>
+                                            <label for="loginId" class="hid">아이디</label>
+                                            <!--  <input type="text" id="loginId" class="input_txt" />-->
+                                            <input type="text" name="id" id="loginId" class="input_txt" maxlength="30" placeholder="아이디 입력">
+                                        </p>
+                                                                                    
+                                        <p>
+                                            <label for="loginPassword" class="hid">비밀번호</label>
+                                            <!-- <input type="password" id="loginPassword" class="input_txt" />-->
+                                            <input type="password" name="password" id="loginPassword" class="input_txt" placeholder="비밀번호 입력" maxlength="30" onkeydown="if(event.keyCode==13) actionLogin();">
+                                        </p>
+                                                
+                                        <button type="button" id="loginBtn" onclick="actionLogin();" class="btnLogin">로그인</button>
+                                    </fieldset>
+                                </form>
+                            </div>		        						
+                            <dl class="logJoin">
+                                <dd><a href="/login/signup" class="btn_arr wt">회원가입</a></dd>
+                            </dl>	 
+                            <div class="notice_wrap">
+                                <p class="tel">서비스 문의</p>
+                                <ul class="ma">
+                                    <li>국립목포대포털 : 정보전산원 061-450-2923</li>
+                                    <li>웹메일 : 정보전산원 061-450-2923</li>
+                                    <li>강의계획(시간강사) : 교무과 061-450-2026</li>
+                                    <li>LMS 가상강좌 : 교육혁신본부 061-450-6211</li>
+                                    <li>MNU핵심역량포인트: 인재개발원 061-450-2943</li>
+                                 </ul>
+                            </div>              				                       	 
+                        </div>
+                        <!-- //tab_container -->
+                    </div>       
+                </div>
+            </div>
+         </div>
+    </div>
+</body>
+</html>
+        
