@@ -1,6 +1,5 @@
 const apiUrl = "http://13.124.61.141:8080/notice"; // 실제 API URL
 
-
 // JWT를 로컬 스토리지에서 가져오기
 const token = localStorage.getItem('token');
 
