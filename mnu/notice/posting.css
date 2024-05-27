@@ -1,0 +1,110 @@
+.postingTable {
+    display: block;
+    margin: 5px 50px 0px;
+    color: black;
+    border-top: 3px solid #18327C;
+    border-collapse: collapse;
+}
+
+.thNumber {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 15px 20px 12px 25px;
+}
+
+.thTitle {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 15px 420px 12px 445px;
+}
+
+.thWriter {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 15px 120px 12px 5px;
+}
+
+.thDate {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 15px 100px 12px 5px;
+}
+
+.thCount {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 15px 100px 12px 5px;
+}
+
+.thFile {
+    font-size: 17px;
+    font-weight: bold;
+    padding-right: 35px;
+}
+
+tbody, thead {
+    display: table-row-group;
+}
+
+th {
+    border-bottom: 1px solid #CFCFD1;
+}
+
+.noData {
+    border-bottom: 1px solid #CFCFD1;
+    color: #666666;
+    height: 300px; /* 원하는 높이로 설정합니다 */
+    justify-content: center; /* 수평 가운데 정렬합니다 */
+    align-items: center; /* 수직 가운데 정렬합니다 */
+    text-align: center;
+}
+
+.tdNumber{
+    border-bottom: 1px solid #CFCFD1;
+    font-size: 15px;
+    text-align: center;
+    height: 15px;
+    color: #666666;
+}
+
+.tdTitle{
+    border-bottom: 1px solid #CFCFD1;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    text-indent: 20px;
+    height: 15px;
+    color: #666666;
+}
+
+.tdWriter{
+    border-bottom: 1px solid #CFCFD1;
+    font-size: 15px;
+    text-align: left;
+    text-indent: 5px;
+    height: 15px;
+    color: #666666;
+}
+
+.tdDate{
+    border-bottom: 1px solid #CFCFD1;
+    font-size: 15px;
+    text-align: left;
+    height: 15px;
+    color: #666666;
+}
+
+.tdCount {
+    border-bottom: 1px solid #CFCFD1;
+    font-size: 15px;
+    text-align: left;
+    text-indent: 17px;
+    height: 15px;
+    color: #666666;
+}
+
+.tdFile{
+    border-bottom: 1px solid #CFCFD1;
+    text-align: center;
+    height: 50px;
+}
