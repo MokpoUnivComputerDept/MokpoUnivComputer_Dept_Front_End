@@ -4,10 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <!-- <link rel="stylesheet" href="./globlafooter.css" /> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./signup.js"></script>
   <link rel="stylesheet" href="./signup.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans KR:wght@400&display=swap" />
+  
 </head>
 <body onload="$('#loginId').focus();" cz-shortcut-listen="true">
     <div id="wrap">
@@ -60,9 +63,9 @@
                                             <label for="loginPassword" class="hid">학과/학부/전공</label>
                                             <!-- <input type="password" id="loginPassword" class="input_txt" />-->
                                             <input type="department" name="department" id="department" class="input_txt" placeholder="학과/학부/전공 입력" maxlength="30" onkeydown="if(event.keyCode==13) actionLogin();">
-                                            <select>
-                                                <option>재학</option>
-                                                <option>휴학</option>
+                                            <select id = "status">
+                                                <option>재학중</option>
+                                                <option>휴학중</option>
                                                 <option>졸업</option>
                                             </select>
                                         </p>

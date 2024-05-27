@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <link href="../css/question.css" rel="stylesheet">
     <script src=""></script>
 </head>
@@ -17,16 +19,19 @@
         </div>
     </div>
     <div class="main">
-    <div class="line"> </div>
-    <div style="background-color: white;">
-        <h1>질문</h1>
-        <br>
-        <div class="question"></div>
-        <h1>
-            답변
-        </h1>
-        <br>
-        <div id="answer_container"></div>
-    </div>
+        <div class="line"> </div>
+        <div style="background-color: white;">
+            <h1>질문</h1>
+            <br>
+            <div class="question" th:text="${question}"></div>
+            <h1>답변</h1>
+            <br>
+            <div id="answer_container">
+                <div th:each="answer : ${answers}">
+                    <p th:text="${answer}"></p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+</html>

@@ -1,48 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>목포대학교 컴퓨터학부</title>
-        <link href="css/COMmajorIntro.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="mainPicture">
-        <img src="images/main_picture.png">
-        <div class = "overlayText">
-            <p style="color:white">전공 소개</p>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">목포대학교 컴퓨터학부</title>
+    <link href="css/COMmajorIntro.css" rel="stylesheet">
+</head>
+<body>
+    <div class="mainPicture">
+        <img th:src="@{${mainPictureUrl}}" src="images/main_picture.png">
+        <div class="overlayText">
+            <p style="color:white" th:text="${introText}">전공 소개</p>
         </div>
+    </div>
+    <p class="majorMainName" th:text="${majorName}">컴퓨터공학전공</p>
+    <div class="container">
+        <div class="imageContainer">
+            <img th:src="@{${departmentImageUrl}}" src="images/con_dept_img_04_05_01.jpg">
         </div>
-        <p class="majorMainName">컴퓨터공학전공</p>
-        <br>
-        <br>
-        <div class="container">
-            <div class="imageContainer">
-            <img src = "images/con_dept_img_04_05_01.jpg">
-            </div>
-            <div class="textContainer">
-            <p class="textMiddle">컴퓨터학부
-            <p class = "textMiddle1">컴퓨터공학전공 </p>
-            </p>
+        <div class="textContainer">
+            <p class="textMiddle" th:text="${department}">컴퓨터학부</p>
+            <p class="textMiddle1" th:text="${majorName}">컴퓨터공학전공</p>
             <table style="line-height: 3.2;">
                 <tr>
                     <td class="NumAndLoc">전화번호</td>
-                    <td>061-450-2440</td>
+                    <td th:text="${phone}">061-450-2440</td>
                 </tr>
                 <tr>
                     <td class="NumAndLoc">위치</td>
-                    <td>공과대학4호관(B21) 3층 301호</td>
+                    <td th:text="${location}">공과대학4호관(B21) 3층 301호</td>
                 </tr>
             </table>
             <div>
-            <a href="https://ce.mokpo.ac.kr/ce/index.do" class="button"> 홈페이지 </a>
-            <a href="https://ipsi.mokpo.ac.kr/sites/ipsi/files/majorPdf/con_dept_img_04_05_01.pdf" class="button1">
-                전공소개 PDF
-            </a>
+                <a th:href="@{${homepageUrl}}" href="https://ce.mokpo.ac.kr/ce/index.do" class="button">홈페이지</a>
+                <a th:href="@{${pdfUrl}}" href="https://ipsi.mokpo.ac.kr/sites/ipsi/files/majorPdf/con_dept_img_04_05_01.pdf" class="button1">전공소개 PDF</a>
+            </div>
         </div>
-        </div>
-        </div>
-        <h2 class="objHeading_h2">전공소개</h2>
-        <p style="line-height: 1.5;"> 국립목포대학교 컴퓨터공학전공을 소개합니다!
+    </div>
+    <h2 class="objHeading_h2">전공소개</h2>
+    <p style="line-height: 1.5;" th:text="${introduction}">
+        국립목포대학교 컴퓨터공학전공을 소개합니다!
             <br>
             <br>
             우리 전공에서는 컴퓨터에 관한 모든 것을 배울 수 있습니다. 컴퓨터 기초부터 시작해서 프로그래밍, 인공지능, 가상현실 같은 최신 기술까지 다룹니다. 여러분들이 현장에서 바로 일할 수 있는 실무 능력과 창의적인 프로젝트를 수행할 수 있도록 도와줍니다.
@@ -58,40 +54,26 @@
             <br>
             <br>
             컴퓨터에 관심이 많거나 이 분야에서 미래를 꿈꾸는 친구들에게 국립목포대학교 컴퓨터공학전공은 정말 좋은 선택이 될 것입니다. </p>
-            <div class="wrap_major_5">
-            <h2 class="objHeading_h2">
-                졸업 후 진로 및 진출 현황</h2>
-                <dl> 
-                    <dt>
-                    소프트웨어분야 
-                    </dt> 
-                    <dd>
-                    시스템통합(SI) 프로그래머, 인공지능 개발자, 데이터베이스 관리자, 인공지능 개발자,
-                    <br>가상현실 전문가, 웹응용시스템 개발자, 게임 개발자, 앱 개발자, 임베디드시스템 개발자 
-                    </dd> 
-                </dl>
-                <dl> 
-                    <dt>
-                    하드웨어분야 
-                    </dt> 
-                    <dd>
-                    임베디드하드웨어 개발자, 모바일기기 개발자 
-                    </dd> 
-                </dl>
-                <dl> 
-                    <dt>
-                    네트워크분야 
-                    </dt> 
-                    <dd>
-                    시스템 관리자, 네트워크 엔지니어, 컴퓨터보안 전문가, 정보 검색사, 클라우드아키텍트 
-                    </dd> 
-                </dl>
-            </div>
-
-        </body>
+    <div class="wrap_major_5">
+        <h2 class="objHeading_h2">졸업 후 진로 및 진출 현황</h2>
+        <dl>
+            <dt>소프트웨어분야</dt>
+            <dd>
+                시스템통합(SI) 프로그래머, 인공지능 개발자, 데이터베이스 관리자, 인공지능 개발자, 가상현실 전문가, 웹응용시스템 개발자
+            </dd>
+        </dl>
+        <dl>
+            <dt>하드웨어분야</dt>
+            <dd>
+                임베디드하드웨어 개발자, 모바일기기 개발자
+            </dd>
+        </dl>
+        <dl>
+            <dt>네트워크분야</dt>
+            <dd>
+                시스템 관리자, 네트워크 엔지니어, 컴퓨터보안 전문가, 정보 검색사, 클라우드아키텍트
+            </dd>
+        </dl>
+    </div>
+</body>
 </html>
-
-
-
-
-

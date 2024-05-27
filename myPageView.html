@@ -1,7 +1,17 @@
 <!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <link href="../css/myPage.css" rel="stylesheet">
     <script src="../mypage.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#footers").load("/footer.html");
+            $("#temp").load("/temp.html"); 
+            $('#nav').load("/nav.html");
+        });
+    </script> -->
 </head>
 <body class="sub _responsiveObj sub type_1 page16795 college_templet_04 _msMain eQ01 Tablet">
     <div class="wrap_sub_visual">
@@ -19,21 +29,27 @@
         </div>
     </div>
     <div class="main">
-    <div class="line"></div>
-    <div style="background-color: white;">
-        <table id="data-table">
-            <thead>
-                <tr>
-                    <th>작성일자</th>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>조회수</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- 데이터가 여기에 동적으로 삽입될 것입니다. -->
-            </tbody>
-        </table>
+        <div class="line"></div>
+        <div style="background-color: white;">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>작성일자</th>
+                        <th>제목</th>
+                        <th>게시판</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="post : ${posts}">
+                        <td th:text="${post.date}"></td>
+                        <td th:text="${post.title}"></td>
+                        <td th:text="${post.author}"></td>
+                        <td th:text="${post.views}"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>
+</html>
