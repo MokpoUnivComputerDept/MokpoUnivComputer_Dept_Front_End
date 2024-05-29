@@ -6,6 +6,20 @@
         <title>Document</title>
         <!-- <link rel="stylesheet" href="./nav.css" /> -->
         <link rel="stylesheet" href="./nav.css" />
+        <script>
+            // 로컬 스토리지에서 JWT 토큰 확인
+            const token = localStorage.getItem('jwtToken');
+    
+            // 링크 요소와 li 요소 찾기
+            const loginLink = document.querySelector('#login-link a');
+            const loginLi = document.getElementById('login-link');
+    
+            if (token) {
+                // JWT 토큰이 존재하면 클래스 'on' 추가 및 링크 수정
+                loginLi.classList.add('on');
+                loginLink.href = "/mypage";  // 새로운 링크로 변경
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -65,7 +79,7 @@
                                     class="top_k2wiz_GNB _wizOdr ul_1 have count5">
                                     <li
                                         class="li_1_16790 li_1 have _1st _even eQ01 _useChildDiv">
-                                        <a href="/cs/16795/subview.do"
+                                        <a  href="http://3.37.97.2/cs/department/intro"
                                             id="top_k2wiz_GNB_16790"
                                             class="top_k2wiz_GNB_16790 a_1 k2wiz_GNB_15352"
                                             target="_self">
@@ -82,7 +96,7 @@
                                                 <li
                                                     class="li_2_16795 li_2 _1st _even">
                                                     <a
-                                                        href="/cs/16795/subview.do"
+                                                        href="http://3.37.97.2/cs/department/intro"
                                                         id="top_k2wiz_GNB_16795"
                                                         class="top_k2wiz_GNB_16795 a_2 k2wiz_GNB_16790"
                                                         target="_self">
@@ -95,7 +109,7 @@
                                                 <li
                                                     class="li_2_16797 li_2 have _odd _2nd _useChildDiv">
                                                     <a
-                                                        href="/cs/16811/subview.do"
+                                                        href="http://3.37.97.2/cs/department/faculty/computer-engineering"
                                                         id="top_k2wiz_GNB_16797"
                                                         class="top_k2wiz_GNB_16797 a_2 k2wiz_GNB_16790"
                                                         target="_self">
@@ -111,7 +125,7 @@
                                                             <li
                                                                 class="li_3_16811 li_3 _1st _even">
                                                                 <a
-                                                                    href="/cs/16811/subview.do"
+                                                                    href="http://3.37.97.2/cs/department/faculty/computer-engineering"
                                                                     id="top_k2wiz_GNB_16811"
                                                                     class="top_k2wiz_GNB_16811 a_3 k2wiz_GNB_16797"
                                                                     target="_self">
@@ -125,7 +139,7 @@
                                                             <li
                                                                 class="li_3_16812 li_3 _odd _2nd">
                                                                 <a
-                                                                    href="/cs/16812/subview.do"
+                                                                    href="http://3.37.97.2/cs/department/faculty/software-engineering"
                                                                     id="top_k2wiz_GNB_16812"
                                                                     class="top_k2wiz_GNB_16812 a_3 k2wiz_GNB_16797"
                                                                     target="_self">
@@ -139,7 +153,7 @@
                                                             <li
                                                                 class="li_3_16813 li_3 _last _even _3rd">
                                                                 <a
-                                                                    href="/cs/16813/subview.do"
+                                                                    href="http://3.37.97.2/cs/department/faculty/information-security"
                                                                     id="top_k2wiz_GNB_16813"
                                                                     class="top_k2wiz_GNB_16813 a_3 k2wiz_GNB_16797"
                                                                     target="_self">
@@ -156,7 +170,7 @@
                                                 <li
                                                     class="li_2_16798 li_2 _last _even _3rd">
                                                     <a
-                                                        href="/cs/16798/subview.do"
+                                                        href="http://3.37.97.2/cs/department/location"
                                                         id="top_k2wiz_GNB_16798"
                                                         class="top_k2wiz_GNB_16798 a_2 k2wiz_GNB_16790"
                                                         target="_self">
@@ -171,7 +185,7 @@
                                     </li>
                                     <li
                                         class="li_1_16791 li_1 have _odd _2nd eQ02 _useChildDiv">
-                                        <a href="/cs/16799/subview.do"
+                                        <a href="http://3.37.97.2/cs/major/computer-engineering"
                                             id="top_k2wiz_GNB_16791"
                                             class="top_k2wiz_GNB_16791 a_1 k2wiz_GNB_15352"
                                             target="_self">
@@ -188,8 +202,7 @@
                                                 <li
                                                     class="li_2_16799 li_2 _1st _even">
                                                     <a
-                                                        href="/cs/16799/subview.do"
-                                                        id="top_k2wiz_GNB_16799"
+                                                        href="http://3.37.97.2/cs/major/computer-engineering"
                                                         class="top_k2wiz_GNB_16799 a_2 k2wiz_GNB_16791"
                                                         target="_self">
                                                         컴퓨터공학전공
@@ -201,7 +214,7 @@
                                                 <li
                                                     class="li_2_16800 li_2 _odd _2nd">
                                                     <a
-                                                        href="/cs/16800/subview.do"
+                                                        href="http://3.37.97.2/cs/major/software-engineering"
                                                         id="top_k2wiz_GNB_16800"
                                                         class="top_k2wiz_GNB_16800 a_2 k2wiz_GNB_16791"
                                                         target="_self">
@@ -214,7 +227,7 @@
                                                 <li
                                                     class="li_2_16801 li_2 _last _even _3rd">
                                                     <a
-                                                        href="/cs/16801/subview.do"
+                                                        href="http://3.37.97.2/cs/major/information-security"
                                                         id="top_k2wiz_GNB_16801"
                                                         class="top_k2wiz_GNB_16801 a_2 k2wiz_GNB_16791"
                                                         target="_self">
@@ -229,7 +242,7 @@
                                     </li>
                                     <li
                                         class="li_1_16792 li_1 have _even _3rd eQ03 _useChildDiv">
-                                        <a href="/cs/16802/subview.do"
+                                        <a href="http://3.37.97.2/cs/curriculum/computer-engineering"
                                             id="top_k2wiz_GNB_16792"
                                             class="top_k2wiz_GNB_16792 a_1 k2wiz_GNB_15352"
                                             target="_self">
@@ -246,7 +259,7 @@
                                                 <li
                                                     class="li_2_16802 li_2 _1st _even">
                                                     <a
-                                                        href="/cs/16802/subview.do"
+                                                        href="http://3.37.97.2/cs/curriculum/computer-engineering"
                                                         id="top_k2wiz_GNB_16802"
                                                         class="top_k2wiz_GNB_16802 a_2 k2wiz_GNB_16792"
                                                         target="_self">
@@ -259,7 +272,7 @@
                                                 <li
                                                     class="li_2_16803 li_2 _odd _2nd">
                                                     <a
-                                                        href="/cs/16803/subview.do"
+                                                        href="http://3.37.97.2/cs/curriculum/software-engineering"
                                                         id="top_k2wiz_GNB_16803"
                                                         class="top_k2wiz_GNB_16803 a_2 k2wiz_GNB_16792"
                                                         target="_self">
@@ -273,7 +286,7 @@
                                                 <li
                                                     class="li_2_16804 li_2 _even _3rd">
                                                     <a
-                                                        href="/cs/16804/subview.do"
+                                                        href="http://3.37.97.2/cs/curriculum/information-security"
                                                         id="top_k2wiz_GNB_16804"
                                                         class="top_k2wiz_GNB_16804 a_2 k2wiz_GNB_16792"
                                                         target="_self">
@@ -286,7 +299,7 @@
                                                 <li
                                                     class="li_2_16871 li_2 _odd">
                                                     <a
-                                                        href="/cs/16871/subview.do"
+                                                        href="http://3.37.97.2/cs/curriculum/common-first-year"
                                                         id="top_k2wiz_GNB_16871"
                                                         class="top_k2wiz_GNB_16871 a_2 k2wiz_GNB_16792"
                                                         target="_self">
@@ -299,7 +312,7 @@
                                                 <li
                                                     class="li_2_16805 li_2 _last _even">
                                                     <a
-                                                        href="/liberal/6095/subview.do"
+                                                        href="https://cs.mokpo.ac.kr/liberal/6095/subview.do"
                                                         id="top_k2wiz_GNB_16805"
                                                         class="top_k2wiz_GNB_16805 a_2 k2wiz_GNB_16792 new_win"
                                                         target="_blank">
@@ -314,7 +327,7 @@
                                     </li>
                                     <li
                                         class="li_1_16793 li_1 have _odd eQ04 _useChildDiv">
-                                        <a href="/cs/16806/subview.do"
+                                        <a  href="http://3.37.97.2/cs/community/notice"
                                             id="top_k2wiz_GNB_16793"
                                             class="top_k2wiz_GNB_16793 a_1 k2wiz_GNB_15352"
                                             target="_self">
@@ -331,7 +344,7 @@
                                                 <li
                                                     class="li_2_16806 li_2 _1st _even">
                                                     <a
-                                                        href="/cs/16806/subview.do"
+                                                        href="http://3.37.97.2/cs/community/notice"
                                                         id="top_k2wiz_GNB_16806"
                                                         class="top_k2wiz_GNB_16806 a_2 k2wiz_GNB_16793"
                                                         target="_self">
@@ -344,7 +357,7 @@
                                                 <li
                                                     class="li_2_16807 li_2 _odd _2nd">
                                                     <a
-                                                        href="/cs/16807/subview.do"
+                                                        href="http://3.37.97.2/cs/community/department-trends"
                                                         id="top_k2wiz_GNB_16807"
                                                         class="top_k2wiz_GNB_16807 a_2 k2wiz_GNB_16793"
                                                         target="_self">
@@ -360,7 +373,7 @@
                                                     class="li_2_16808 li_2 _last _even _3rd">
 
                                                     <a
-                                                        href="/cs/16808/subview.do"
+                                                        href="http://3.37.97.2/cs/community/photo-gallery"
                                                         id="top_k2wiz_GNB_16808"
                                                         class="top_k2wiz_GNB_16808 a_2 k2wiz_GNB_16793"
                                                         target="_self">
