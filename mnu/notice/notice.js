@@ -1,8 +1,7 @@
 const contents = document.querySelector(".contents");   // 글 목록을 담을 부모 리스트 요소
 const buttons = document.querySelector(".buttons");     // 페이지 버튼을 담을 부모 리스트 요소
 
-const Url = 'http://13.124.61.141:8080';
-// const Url = '13.124.61.141:8080/notice'
+const Url = '13.124.61.141:8080/notice'
 
 let totalcontent = 1;       // 전체 글의 개수
 let currentpage = 1;        // 현재 페이지 (시작 = 1)
@@ -11,26 +10,26 @@ const showContent = 10;     // 한 페이지에 보여줄 글의 개수
 const showButton = 5;       // 한 화면에 보여줄 버튼의 개수
 
 
-// 페이지네이션 정보 업데이트
-const updatePagination = (data) => {
-    totalcontent = data.totalcontent;
-    totalpage = data.totalpage;
-    currentpage = data.currentpage;
-};
-
-
 // API 호출해서 페이지네이션 정보 업데이트
 const fetchPagination = async () => {
     try {
         const response = await fetch(Url);
         const data = await response.json();
         updatePagination(data);
-        render(currentpage);
+        render();
     } catch (error) {
         console.error('Error fatchingPagination:' ,error);
     }
 };
 
+
+
+// 페이지네이션 정보 업데이트
+const updatePagination = (data) => {
+    totalcontent = data.totalcontent;
+    totalpage = data.totalpage;
+    currentpage = data.currentpage;
+};
 
 
 // 버튼 생성
@@ -51,17 +50,20 @@ const makeButton = (id) => {
 
 
 // 페이지 이동
+// 이전 페이지
 const goPrevPage = () => {
     currentpage --;
     if (currentpage < 1) currentpage = 1;         //페이지가 1미만이 되지 않도록 보정
     render(currentpage);
 };
 
+// 다음페이지
 const goNextPage = () => {
     currentpage ++;
     if (currentpage > totalpage) currentpage = totalpage;     // 페이지가 최대 페이지를 넘지 않도록 보정
     render(currentpage);
 };
+
 
 // 이전 페이지 버튼
 const prev = document.createElement("button");
@@ -76,7 +78,19 @@ next.innerHTML = '<ion-icon name="chevron-forward-outline"></ion-icon>';
 next.addEventListener("click", goNextPage);
 
 
-// 페이지 버튼 추가
+const fetchContent = async () => {
+    try {
+        const response = await fetch(Url);
+        const data = await response.json();
+
+        renderContent(data);
+    } catch(error) {
+        console.error('Error fetching content: ', error);
+    }
+}
+
+
+// 페이지 버튼 추가(보여줌)
 const renderButton = () => {
     // 버튼 리스트 초기화
     buttons.innerHTML = "";
@@ -104,7 +118,6 @@ const updateContentCount = () => {
     }
 };
 
-updateContentCount();
 
 // 게시글이 0개일 경우
 const noData = () => {
@@ -113,18 +126,49 @@ const noData = () => {
         messageContainer.innerHTML = "<tr><td colspan='6'>게시물이 없습니다.</td></tr>";
         messageContainer.classList.add("noData");
     }
-
     else {
-        // 코드 작성
+        displayData();
     }
 };
-noData()
+
+
+// 게시글이 0개가 아닐 경우
+const displayData = () => {
+    document.addEventListener('DOMContentLoaded', function(){
+        const postingTable = document.querySelector('.postingTable tbody');
+
+        function displayData(data) {
+            data.forEach(post => {
+                const row = document.createElement('tr');
+                // <tr>내용 구성
+                row.innerHTML = `
+                <td class='tdNumber'>${post.number}</td>
+                <td class='tdTitle'>${post.title}</td>
+                <td class='thAuthor'>${post.author}</td>
+                <td class='tdDate'>${post.date}</td>
+                <td class='tdCount'>${post.count}</td>
+                <td class='tdFile'>${post.file}</td>
+            `; 
+            // 새로 만든 <tr>을 tbody에 추가
+            postingTable.appendChild(row);
+            });
+        }
+
+        fetch(Url)
+            .then(response => response.json())
+            .then(data => displayData(data))
+            .catch(error => console.error("오류발생: ", error));
+    });
+}
+
 
 
 // 초기화
 const init = async () => {
     await fetchPagination();        // 페이지네이션 정보 불러오기
-    render();       // 페이지 렌더링
+    updateContentCount();
+    noData();
+    render();
 };
 
 init();     // 초기화 실행

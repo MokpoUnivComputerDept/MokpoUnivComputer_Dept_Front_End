@@ -2,26 +2,10 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="search.css">
         <link rel="stylesheet" href="form.css">
-        <link rel="stylesheet" href="posting.css">
-        <link rel="stylesheet" href="noData.css">
-        <link rel="stylesheet" href="pagination.css">
-        <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.css">
     </head>
-    
+
     <body>
-        <div>
-            <h1 class="h1">포토갤러리</h1>
-        </div>
-
-        <div class="textContainer">
-            <div class="count"></div>
-            <div class="txt">
-                ※ 공개글 작성 시 주민등록번호, 외국인등록번호, 운전면허번호, 계좌번호 등 개인정보를 입력하시면 안됩니다.
-            </div>
-        </div>
-
         <div class="contents" id="bContents" tabindex="0">
             <div id="contentsEditHtml">
                 <input type="hidden" id="siteIdVal" value="cs">
@@ -75,35 +59,5 @@
                 </article>
             </div>
         </div>
-
-        <div class="image" id="imageGrid"></div>
-        <div class="noImage" id="noData"></div>
-
-        <div>
-            <button class="textBox" onclick="goToPage()">
-                글쓰기
-            </button>
-            <script>
-                function goToPage() {
-                    // 이동할 페이지의 URL
-                    var writingPageUrl = "../noticeCreate/noticeCreate.html";
-                    // 현재 페이지를 새로운 URL로 이동
-                    window.location.href = writingPageUrl;
-                }
-            </script>
-        </div>
-
-
-
-    <!--페이지네이션-->
-        <article class="article">
-            <ul class="contents"></ul>
-            <div class="buttons"></div>
-        </article>
-
-        <script src="searchBox.js"></script>
-        <script src="photogallery.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    </body>   
+    </body>
 </html>

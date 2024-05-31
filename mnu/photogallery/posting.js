@@ -1,71 +1,68 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('')   // api 엔드포인트
-        .then(response => response.json())
-        .then(data => {
-            const imageGrid = document.getElementById('imageGrind');
-            data.images.slice(0,8).forEach(item => {
-                // 각 이미지를 위한 그리드
-                const gridItem = document.createElement('div')
-                gridItem.className = 'grid-item';
+export function fetchImage(page) {
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('http://localhost:5500/photogallery/index/'+page)   // api 엔드포인트
+            .then(response => response.json())
+            .then(data => {
+                const imageGrid = document.getElementById('imageGrid');
+                data.images.slice(0,8).forEach(item => {
+                    // 각 이미지를 위한 그리드
+                    const gridItem = document.createElement('div')
+                    gridItem.className = 'grid-item';
 
-                // 이미지에 링크 추가
-                const link = document.createElement('a');
-                link.href = item.link;      // 링크 설정
-                link.target = '_blank';     // 새 탭에서 열기 (선택한 게시물 보여주는 걸로 연결하면 될 듯)
+                    // 이미지에 링크 추가
+                    const url = "http://3.37.97.2/cs/community/photo-gallery/";
+                    const link = document.createElement('a');
+                    link.href = url+item.id;      // 클릭 시 이동할 url(그러면 여기서 선택한 게시물의 링크로 연결하는건가?)
+                    link.target = '_self';
 
-                // 이미지 생성
-                const img = document.createElement('img');
-                img.src = item.imageUrl;    // 이미지 url설정
-                img.alt = '';
+                    // 이미지 생성
+                    const img = document.createElement('img');
+                    img.src = item.thumbnail.fileUrl;    // 이미지 url설정 <-- 이게 보여줄 이미지 사진 (첫번째 사진 보여주기)
+                    img.alt = item.thumbnail.fileName;
 
-                // 링크 안에 이미지 추가
-                link.appendChild(img);
+                    // 링크 안에 이미지 추가
+                    link.appendChild(img);
 
-                // 이미지 정보 div 생성
-                const infoDiv = document.createElement('div');
-                infoDiv.className = 'image-info';
+                    // 이미지 정보 div 생성
+                    const infoDiv = document.createElement('div');
+                    infoDiv.className = 'image-info';
 
-                // 제목
-                const title = document.createElement('div');
-                title.className = 'title';
-                title.textContent = item.title;
+                    // 제목
+                    const title = document.createElement('div');
+                    title.className = 'title';
+                    title.textContent = item.title;
 
-                // 작성일자
-                const date = document.createElement('div');
-                date.className = 'date';
-                date.textContent = itme.date;
+                    // 작성일자
+                    const date = document.createElement('div');
+                    date.className = 'date';
+                    date.textContent = item.date;
 
-                // 작성자
-                const author = document.createElement('div');
-                author.className = 'author';
-                author.textContent = item.author;
+                    // 작성자
+                    const author = document.createElement('div');
+                    author.className = 'author';
+                    author.textContent = item.author;
 
-                // 조회수
-                const count = document.createElement('div');
-                count.className = 'count';
-                count.textContent = item.count;
+                    // 조회수
+                    const count = document.createElement('div');
+                    count.className = 'count';
+                    count.textContent = item.count;
 
-                // 정보 추가
-                infoDiv.appendChild(title);
-                infoDiv.appendChild(date);
-                infoDiv.appendChild(author);
-                infoDiv.appendChild(count);
+                    // 정보 추가
+                    infoDiv.appendChild(title);
+                    infoDiv.appendChild(date);
+                    infoDiv.appendChild(author);
+                    infoDiv.appendChild(count);
 
-                // 그리드 아이템에 정보 추가
-                gridItem.appendChild(link);
-                gridItem.appendChild(infoDiv);
+                    // 그리드 아이템에 정보 추가
+                    gridItem.appendChild(link);
+                    gridItem.appendChild(infoDiv);
 
-                // 컨테이너에 아이템 추가
-                imageGrid.appendChild(gridItem);
+                    // 컨테이너에 아이템 추가
+                    imageGrid.appendChild(gridItem);
+                })
             })
-        })
-        .catch(error => {
-            console.error('Error fetching images:', error);
-        })
-})
-
-
-
-
-
-// 제목/ 작성일자 / 작성자 / 조회수 / 돋보기 (클릭 시 대표이미지 보여주기)
+            .catch(error => {
+                console.error('Error fetching images:', error);
+            })
+    })
+}

@@ -1,0 +1,135 @@
+const fetchPagination = async () => {
+    try {
+        const response = await fetch(Url);
+        : fetch() 함수로 지정된 url에서 데이터 가져옴
+        : await 키워드로 작업이 완료될 때까지 기다림
+        : response 변수에 서버 응답을 담음
+
+        const data = await response.json();
+        : 서버 응답을 json형태로 변환
+        : await키워드로 작업의 완료를 기다림
+        : 위의 결과들을 data변수에 담음
+
+        updatePagination(data);
+        : update~ ()함수를 호출하고 서버로 받은 데이터로 업데이트함
+        : update~ ()에서 정의된 전역 변수 totalcontent, totalpage, currentpage를 업데이트 함
+
+        render(currentpage);
+        : 페이지를 렌더링하는 함수 render 함수 호출
+        : 현재 페이지를 매개변수로 받아와서 내용 보여줌
+
+    } catch (error) {
+        console.error('Error fatchingPagination:' ,error);
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+======================================================================================
+
+const contents = document.querySelector(".contents");   // 글 목록을 담을 부모 리스트 요소
+const buttons = document.querySelector(".buttons");     // 페이지 버튼을 담을 부모 리스트 요소
+
+const numOfContent = 178;      //전체 글의 개수 -> 이거 받아와야 함 / 지금은 임시로 넣어둠
+const showContent = 10;        //한 페이지에 보여줄 글의 개수
+const showButton = 5;          //한 화면에 보여줄 페이지 버튼의 개수
+let page = 1;                   //현재 페이지 (시작 페이지 = 1)
+const maxPage = Math.ceil(numOfContent / showContent);      //전체 페이지 수 -> 받아와야 함 / 지금은 내가 계산해둠
+/* Math.ceil : 인자로 들어온 값보다 크거나 같은 숫자 중 가장 작은 정수 반환
+글의 총 개수가 178이므로 10개씩 보여주기 위해서는 18페이지가 필요함
+연산 결과는 17이지만 메서드에 의해 18을 반환함 */
+
+const prev = document.createElement("button");
+prev.classList.add("button", "prev");
+
+const next = document.createElement("button");
+next.classList.add("button", "next");
+
+// 버튼 생성
+const makeButton = (id) => {
+    const button = document.createElement("button");
+    button.classList.add("button");
+    button.dataset.num = id;
+    button.innerText = id;
+    button.addEventListener("click", (e) => {
+        Array.from(buttons.children).forEach((button) => {
+            if(button.dataset.num) button.classList.remove("active");
+        });
+        e.target.classList.add("active");
+        renderContent(parselnt(e.target.dataset.num));
+    });
+    return button;
+}
+/* 버튼을 클릭했을 때 해당 페이지의 글 목록을 불러오고,
+특정 버튼을 클릭하면 활성화 시키고, 다른 버튼은 비활성화 상태로 만들기 위해
+반복문을 사용하여 classList 조정 */
+
+// const renderContent = (page) => {
+//     // 목록 리스트 초기화
+//     while (contents.hasChildNodes()) {
+//       contents.removeChild(contents.lastChild);
+//     }
+//     // 글의 최대 개수를 넘지 않는 선에서, 화면에 최대 10개의 글 생성
+//     for (let id = (page - 1) * showContent + 1; id <= page * showContent && id <= numOfContent; id++) {
+//       contents.appendChild(makeContent(id));
+//     }
+//   };
+
+const renderButton = (page) => {
+    // 버튼 리스트 초기화
+    buttons.innerHTML = "";
+    // while (buttons.hasChildNodes()) {
+    //     buttons.removeChild(buttons.lastChild);
+    // }
+
+    // 화면에 최대 5개의 버튼 생성
+    for (let id = page; id < page + showButton && id <= maxPage; id++) {
+        buttons.appendChild(makeButton(id));
+    }
+
+    // 첫 버튼 활성화(class = "active")
+    // buttons.firstChild.classList.add("active");
+    buttons.children[0].classList.add("active");
+    buttons.prepend(prev);
+    buttons.append(next);
+
+    //이전, 다음 페이지 버튼이 필요한가?
+    if (page - showButton < 1) buttons.prepend(prev);
+    if (page + showButton > maxPage) buttons.append(next);
+}
+
+const render = (page) => {
+    // renderContent(page);
+    renderButton(page);
+};
+render(page)
+
+// 페이지 이동
+const goPrevPage = () => {
+    page -= showButton;
+    if (page < 1) page = 1;         //페이지가 1미만이 되지 않도록 보정
+    render(page);
+};
+
+const goNextPage = () => {
+    page += showButton;
+    if (page > maxPage) page = maxPage;     // 페이지가 최대 페이지를 넘지 않도록 보정
+    render(page);
+};
+
+prev.innerHTML = '<ion-icon name = "chevron-back-outline"></ion-icon>';
+prev.addEventListener("click", goPrevPage);
+next.innerHTML =  '<ion-icon name="chevron-forward-outline"></ion-icon>';
+next.addEventListener("click", goNextPage);
+
+// 페이지 버튼 추가
+buttons.prepend(prev)
+buttons.append(next)

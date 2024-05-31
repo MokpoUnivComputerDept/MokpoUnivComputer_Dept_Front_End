@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.horizontalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.horizontalImage {
+    width: 250px;
+    height: 200px;
+    border: 1px solid #000000;
+}
+
+.horizontalText {
+    width: 900px;
+    height: 200px;
+    font-size: 20px;
+    margin-left: 100px;
+    border: 1px solid #000000;
+}
+
+.fa-home {
+    color: #333;
+    font-size: 50px;
+    margin-left: 100px;
+}

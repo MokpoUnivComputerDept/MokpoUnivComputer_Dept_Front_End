@@ -1,39 +1,22 @@
 const editor = new toastui.Editor({
     el: document.querySelector('#editor'),
     plugins: [toastui.Editor.plugin.codeSyntaxHighlight],
-    initialEditType: 'markdown',
+    initialEditType: 'wysiwyg',
     previewStyle: 'vertical',
     height: '700px',
-
-    hooks: {
-        addImageBlobHook(blob, callback) {
-            uploadImageToS3(blob)
-                .then(url => {;
-                    callback(url)
-                })
-                .catch(error => {
-                    console.error('Error uploading image to S3:', error);
-                });
-        }
-    }
 });
 
-
-async function uploadImageToS3(blob) {
-    
-}
-
-// const Url = '13.124.61.141:8080/notice/create'
-// const Url = 'http://13.124.61.141:8080/noticeCreate/create';
-const s3Url = '';
+const Url = 'http://13.124.61.141:8080/upload'
 
 document.querySelector('#save').addEventListener('click', async() => {
     try {
         const content = editor.getMarkdown();
+        const firstImageUrl = sessionStorage.getItem('firstImageUrl')
+        const title = document.getElementById('title').value;
 
-        const response = await fetch(Url, {
+        const response = await fetch(Url,{
             method: 'POST',
-            body: JSON.stringify({content}),
+            body: JSON.stringify({content, firstImageUrl,title}),
             headers: {
                 'Content-Type': 'application/json',
             }
@@ -52,7 +35,8 @@ document.querySelector('#save').addEventListener('click', async() => {
 
 document.getElementById('multipartInputBtn').addEventListener('click', async () => {
     const multipartInput_fileInput = document.getElementById('multipartInput');
-    const file = multipartInput_fileInput.files[0];
+    const file = multipartInput_fileInput.files;
+    const firstFile = file[0];
     const fileName = file.name;
     const fileSize = file.size;
 
@@ -65,7 +49,7 @@ document.getElementById('multipartInputBtn').addEventListener('click', async () 
     try {
         // 업로드 시작 요청
         let start = new Date();
-        let res = await axios.post(`${s3Url}/initiate-upload`, { fileName: fileName });
+        let res = await axios.post(`${Url}/actual-upload`, { fileName: fileName });
         const uploadId = res.data.uploadId;
         const newFilename = res.data.fileName;
 
@@ -80,9 +64,9 @@ document.getElementById('multipartInputBtn').addEventListener('click', async () 
         for (let uploadCount = 1; uploadCount < chunkCount + 1; uploadCount++) {
             let start = (uploadCount - 1) * chunkSize;
             let end = uploadCount * chunkSize;
-            let fileBlob = uploadCount < chunkCount ? file.slice(start, end) : file.slice(start);
+            let fileBlob = uploadCount < chunkCount ? firstFile.slice(start, end) : firstFile.slice(start);
 
-            let getSignedUrlRes = await axios.post(`${s3Url}/upload-signed-url`, {
+            let getSignedUrlRes = await axios.post(`${Url}/upload-signed-url`, {
                 fileName: newFilename,
                 partNumber: uploadCount,
                 uploadId: uploadId
@@ -104,12 +88,15 @@ document.getElementById('multipartInputBtn').addEventListener('click', async () 
             multiUploadArray.push(uploadPartDetails);
         }
 
-        const completeUpload = await axios.post(`${s3Url}/complete-upload`, {
+        const completeUpload = await axios.post(`${Url}/complete-upload`, {
             fileName: newFilename,
             parts: multiUploadArray,
             uploadId: uploadId,
             userImageName: userImageName
         });
+
+        const firstImageUrl = completeUpload.data.url;  // 첫번째 사진 url
+        sessionStorage.setItem('firstImageUrl',firstImageUrl);
         let end = new Date();
         console.log("파일 업로드 하는데 걸린 시간 : " + (end - start) + "ms")
         console.log(completeUpload.data, ' 업로드 완료 응답값');
@@ -117,13 +104,3 @@ document.getElementById('multipartInputBtn').addEventListener('click', async () 
         console.log(err, err.stack);
     }
 });
-
-// document.getElementById('abortUploadBtn').addEventListener('click', () => {
-//     const uploadId = sessionStorage.getItem('uploadId');
-//     const fileName = sessionStorage.getItem('fileName');
-//     axios
-//         .post(`${s3Url}/abort-upload`, { fileName: fileName, uploadId: uploadId })
-//         .then((r) => console.log(r.data))
-//         .catch((err) => console.error(err));
-//     clearInterval();
-// });
