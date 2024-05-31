@@ -1,0 +1,238 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/major.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+        $("#nav").load("./nav.html");
+        $("#footers").load("./footer.html");
+        $("#temp").load("./temp.html"); 
+        });
+        $(function(){
+            $("html, body").animate({ scrollTop: 0 }, "fast"); 
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var buttons = document.querySelectorAll('.pageNavigationBtn');
+
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var siblingUl = button.nextElementSibling;
+                    if (siblingUl.style.display === 'none' || siblingUl.style.display === '') {
+                        siblingUl.style.display = 'block';
+                    } else {
+                        siblingUl.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // JavaScript to handle scrolling behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll to top when the page is loaded
+
+            // Get the wrap_page_func element
+            let myDiv = document.querySelector('.wrap_page_func');
+            let goTop = document.querySelector('.goTop');
+            let lastScrollTop = 0;
+
+            // Add scroll event listener to handle hiding/showing the element
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop === 0) {
+                    // At the top of the page
+                    myDiv.classList.remove('hidden');
+                    goTop.classList.add('hidden');
+                } else {
+                    // Not at the top of the page
+                    myDiv.classList.add('hidden');
+                    goTop.classList.remove('hidden');
+                }
+
+                lastScrollTop = scrollTop; // Update last scroll position
+            });
+        });
+        goTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    </script>
+</head>
+<body class="sub _responsiveObj sub type_1 page16798 college_templet_04 Desktop _msMain eQ01" cz-shortcut-listen="true">
+	<!--SKIP메뉴-->	
+    <div id="nav"></div>
+	<!--서브비주얼-->
+	<div class="wrap_sub_visual">
+        <a href="http://3.37.97.2/cs/department/intro" class="prev" target="_self">학부소개</a>
+        <a href="http://3.37.97.2/cs/curriculum/computer-engineering" class="next" target="_self">교과과정</a>
+        <div class="container">
+          <p class="visual_intro"><strong>전공소개</strong><span>구성원의 자긍심이 넘치는 행복한 대학</span></p>
+        </div>
+    </div>
+	<!--서브비주얼-->
+
+	<!--페이지기능-->
+	<div class="wrap_page_func">
+        <div class="container">
+            <!--UTIL-->
+            <!--UTIL-->	  		
+            <!--SNB-->
+            <div class="sub_navi">
+                <ul>
+                    <li class="home"><a href="http://3.37.97.2">홈으로</a></li>
+                    <li id="pagetitle1"><button class="pageNavigationBtn" title="펼치기">전공소개</button><ul class="pageNavigation" style="display: none;"><li><a href="http://3.37.97.2/cs/department/intro" target="_self">학부소개</a></li><li><a href="http://3.37.97.2/cs/major/computer-engineering" target="_self">전공소개</a></li><li><a href="http://3.37.97.2/cs/curriculum/computer-engineering" target="_self">교과과정</a></li><li><a href="http://3.37.97.2/cs/community/notice" target="_self">커뮤니티</a></li><li><a href="http://3.37.97.2/cs/guide/sitemap" target="_self">이용안내</a></li></ul></li>
+                    <li id="pagetitle2"><button class="pageNavigationBtn" title="펼치기">융합소프트웨어전공</button><ul class="pageNavigation" style="display: none;"><li><a href="http://3.37.97.2/cs/major/computer-engineering" target="_self">컴퓨터공학전공</a></li><li><a href="http://3.37.97.2/cs/major/software-engineering" target="_self">융합소프트웨어전공</a></li><li><a href="http://3.37.97.2/cs/major/information-security" target="_self">정보보호전공</a></li></ul></li>
+                </ul>
+              </div>
+            <!--SNB-->
+        </div>
+	</div>
+	<!--페이지기능-->
+
+	<!--바디-->
+	<div class="wrap_contents">
+        <div class="container">
+            <!--탭메뉴-->
+            <div class="tab">
+                <nav id="menuUItab" class="menuUItab ">
+                    <div class="hidden">
+                        fnctId=sitemenu,menuViewType=tab
+                    </div>
+                </nav>
+            </div>
+            <!--탭메뉴-->
+            <!--타이틀-->
+            <div class="page_title">
+                <h1>융합소프트웨어전공</h1>
+            </div>
+            <!--타이틀-->		
+            <!--컨텐츠-->
+            <div class="contents" id="bContents" tabindex="0">
+                <div id="contentsEditHtml">
+                    <input type="hidden" id="siteIdVal" value="cs">
+                    <div class="contntMaster">
+                        /WEB-INF/jsp/k2web/com/cop/site/layout.jsp<br>
+                        cs_JW_MS_K2WT001_S
+                    </div>
+                    <input type="hidden" id="pathMenuSeqs" value="15352,16791,16800">
+                    <input id="editMode" type="hidden" value="GENERAL">
+                    <article id="_contentBuilder" class="_contentBuilder _k2__WiZaRd_general">
+                        <div class="_obj _objHtml" id="menu16800_obj46" style=""> 
+                            <div class="wrap_major_1"> 
+                                <div class="container"> 
+                                    <div class="item_1"> 
+                                        <img src="https://ipsi.mokpo.ac.kr/sites/ipsi/images/depart/con_dept_img_04_05_02.jpg" alt="융합소프트웨어 전공"> 
+                                    </div> 
+                                    <div class="item_2"> 
+                                        <dl> 
+                                            <dt> 
+                                                <span>컴퓨터학부</span> 
+                                                <strong>융합소프트웨어 전공</strong> 
+                                            </dt> 
+                                            <dd> 
+                                                <div class="table_1"> 
+                                                    <table> 
+                                                        <caption>
+                                                            전화번호, 위치 
+                                                        </caption> 
+                                                        <colgroup> 
+                                                            <col style="width:30%;"> 
+                                                            <col style=""> 
+                                                        </colgroup> 
+                                                        <tbody> 
+                                                            <tr> 
+                                                                <th>전화번호</th> 
+                                                                <td class="left">061-450-2770</td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                                <th>위치</th> 
+                                                                <td class="left">공과대학4호관(B21) 2층 201호</td> 
+                                                            </tr> 
+                                                        </tbody> 
+                                                    </table> 
+                                                </div> 
+                                                <div class="buttons"> 
+                                                    <a href="https://software.mokpo.ac.kr" title="새창" target="_blank" class="a_1 new_win">홈페이지</a> 
+                                                    <a href="https://ipsi.mokpo.ac.kr/sites/ipsi/files/majorPdf/con_dept_img_04_05_02.pdf" title="새창" target="_blank" class="a_2 new_win">전공소개 PDF</a> 
+                                                </div> 
+                                            </dd> 
+                                        </dl> 
+                                    </div> 
+                                    <div class="boxTop"></div> 
+                                    <div class="boxBottom"></div> 
+                                </div> 
+                            </div> 
+                        </div> 
+                        <div class="_obj _objHtml" id="menu16800_obj47" style=""> 
+                            <div class="wrap_major_2"> 
+                                <div class="container"> 
+                                    <h2 class="objHeading_h2">전공소개</h2> 
+                                    <p> 융합소프트웨어 전공은 모든 산업 분야가 융합되는 4차산업혁명시대 융합의 핵심인 소프트웨어를 설계하고 개발하는 데 필요한 실무 소프트웨어 개발 전문가를 양성하는 데 목표를 두고 있습니다.<br><br> 이러한 실무 소프트웨어 개발자로서 가장 수요가 많은 웹 프로그래밍(프론트엔드, 백엔드), 앱 프로그래밍 설계 및 개발 실무 및 자바, 파이썬, 자바스크립트 등 가장 많이 사용되는 범용적인 프로그래밍 언어를 집중적으로 학습하고, 게임, 인공지능, 사물 인터넷, 데이터사이언스 등 최신 기술 트랜드에 맞는 고급 소프트웨어 개발에 필요한 기본 지식 및 실무를 습득할 수 있도록 최근 교과 과정을 전면적으로 개편하였습니다.<br><br> 추가적으로, 실무 중심의 교과 과정 운영을 위해서 최신 실습 기자재와 교육 환경을 구축하였고, 4학년 2학기에 IPP 일학습병행제를 통해 업무협약(MOU)된 협력 회사에서 현장실습을 수행하면 졸업 전 1년 경력을 쌓을 수 있고 추가로 졸업 후 현장실습 회사에 취업할 수 있도록 취업 연계형 프로그램도 제공하고 있습니다.<br><br> 4차산업혁명 소프트웨어 컨버전스 시대에 다양한 소프트웨어 실무 개발자 양성에 중점을 둔 융합소프트웨어 전공을 통해 여러분의 무한한 가능성과 꿈을 보장 받기 바랍니다. </p> 
+                                </div> 
+                            </div> 
+                        </div> 
+                        <div class="_obj _objHtml _absolute" id="menu16800_obj48" style=""> 
+                            <div class="wrap_major_5"> 
+                                <div class="container"> 
+                                    <h2 class="objHeading_h2">졸업 후 진로 및 진출 현황</h2> 
+                                    <dl> 
+                                        <dd>
+                                            웹 시스템 개발, 모바일 앱 개발, 빅데이터 및 인공지능 시스템 개발 
+                                        </dd> 
+                                    </dl> 
+                                    <dl> 
+                                        <dd>
+                                            NAVER, KAKAO, 한전KDN, 한국방송통신전파진흥원, 한국전력공사, 한국공항공사 등 
+                                        </dd> 
+                                    </dl> 
+                                    <dl> 
+                                        <dd>
+                                            IT컨설팅, 소프트웨어 개발, 클라우드 컴퓨팅, 사물인터넷, 임베디드시스템, 정보보안 
+                                        </dd> 
+                                    </dl> 
+                                </div> 
+                            </div> 
+                        </div> 
+                        <div class="_obj _objHtml _absolute" id="menu16800_obj49" style=""> 
+                            <div class="wrap_major_7"> 
+                                <div class="container"> 
+                                    <h2 class="objHeading_h2">전공 Q&amp;A</h2> 
+                                    <dl> 
+                                        <dt> 
+                                        <span>Q. </span>융합소프트웨어 전공이란? 
+                                        </dt> 
+                                        <dd>
+                                            융합소프트웨어 전공에서는 실무 중심의 웹/앱 소프트웨어 개발 교육을 중심으로 인공지능, 데이터 과학, IoT 시스템 등 다양한 IT 기술을 융합하는 소프트웨어 개발의 기초 역량을 학습합니다. 
+                                        </dd> 
+                                    </dl> 
+                                    <dl> 
+                                        <dt> 
+                                        <span>Q. </span>IPP 일학습병행제란 무엇인가요? 
+                                        </dt> 
+                                        <dd>
+                                            융합소프트웨어 전공에서는 모든 4학년 학생이 기업체와 학생 근로자로서 정식 계약(4대 보험 가입)하여 6개월간 현장 실무 개발 경력과 12학점을 이수하는 제도로서, 조기 취업 등 취업 역량을 높이는 효과가 큽니다. 
+                                        </dd> 
+                                    </dl> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </article>
+                </div>
+            </div>
+          <!--컨텐츠-->
+        </div>
+    </div>
+    <div id="footers"></div>
+    <div id="temp"></div>
+	<!--바디-->
+	<!--고탑-->
+	<div class="goTop"><a href="#">맨위로</a></div>
+	<!--고탑-->
+</body>
+</html>
