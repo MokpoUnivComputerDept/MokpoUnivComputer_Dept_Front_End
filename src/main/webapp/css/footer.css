@@ -1,0 +1,243 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  word-break: break-all;
+}
+html, body {
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  font-family: 'Noto DemiLight', sans-serif;
+  line-height: 1.4;
+  font-size: 18px;
+  color: #333;
+  letter-spacing: 0;
+  word-wrap: break-word;
+}
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+.siteLink .siteList.active {
+  display: block;
+}
+
+.active-btn {
+  background-color: #152336; /* 활성화된 버튼의 배경색을 변경합니다. */
+}
+.siteLink .siteList {
+  display: none;
+  padding: 30px;
+  background: #152336;
+}
+.siteLink {
+  background: #25374e;
+  position: relative;
+  margin-bottom: -1px;
+}
+*, :after, :before, ::after, ::before {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.siteList > div > ul > li a::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 1px;
+  background: #FFF;
+  position: absolute;
+  left: 0;
+  top: 15px;
+}
+.siteLink .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.siteLink .btns a.active {
+  background: #152336;
+  border-bottom: 0;
+}
+
+.siteLink .container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.siteLink .siteList > ul li a {
+  display: block;
+  color: #FFF;
+  font-size: 14px;
+  position: relative;
+  padding: 5px 10px;
+  line-height: 1.3;
+}
+a:link, a:active, a:visited {
+  text-decoration: none;
+  color: #000;
+}
+a, button, input {
+  border: 0 none;
+}
+.siteList > div {
+  display: flex;
+  border-bottom: 1px solid #455568;
+  /* padding-bottom: 15px;
+  margin-bottom: 15px; */
+}
+.siteList > div > ul > li a {
+  display: block;
+  color: #FFF;
+  font-size: 14px;
+  font-family: 'S-CoreDream-4Regular';
+  position: relative;
+  padding: 5px 10px;
+  line-height: 1.3;
+}
+a:link, a:active, a:visited {
+  text-decoration: none;
+  color: #000;
+}
+.siteLink .btns a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'S-CoreDream-5Medium';
+  color: #FFF;
+  font-size: 15px;
+  line-height: 1;
+  padding: 15px;
+  border-right: 1px solid #455568;
+  border-bottom: 1px solid #455568;
+}
+
+.siteLink .btns a::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.siteList > div > ul > li a.typeMajor {
+  color: #fdf9b7;
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  /* text-decoration: underline; */
+}
+
+.siteList > div h4 {
+  width: 200px;
+  color: #FFF;
+  font-size: 15px;
+  font-family: 'S-CoreDream-5Medium';
+}
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 400;
+}
+h4 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+.siteList > div h4 a {
+  color: #FFF;
+}
+.siteLink .btns a.active {
+  background: #152336;
+  border-bottom: 0;
+}
+a:hover {
+  text-decoration: none;
+  color: #000;
+  transition: all .125s cubic-bezier(0.7,0,0.3,1);
+}
+
+/* .siteList_1 > div > ul > li.nLine > li > a {
+  flex: 0 0 20%;
+} */
+.siteList > div > ul > li {
+  flex: 0 0 20%;
+}
+
+
+li {
+  list-style: none;
+}
+.siteList > div > ul {
+  width: calc(100% - 200px);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.siteList > div > ul > li.nLine > ul.hMajor {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.siteList > div > ul > li.nLine > ul.hMajor > li  {
+  flex-basis: 20%; /* 부모 요소의 너비의 20%를 차지하도록 설정 */
+}
+ul ul {
+  list-style-type: circle;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  /* padding-inline-start: 40px; */
+  unicode-bidi: isolate;
+  
+}
+
+
+.siteList > div {
+  display: flex;
+  border-bottom: 1px solid #455568;
+  /* padding-bottom: 15px;
+  margin-bottom: 15px; */
+}
+
+.siteList > div > ul > li.nLine {
+  flex-basis: 100%;
+  width: 100%;
+  display: flex;
+  
+}
+
+.siteLink .siteList > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.siteLink .siteList > ul li {
+  width: 20%;
+}
+
+.siteLink .siteList > ul li a::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 1px;
+  background: #FFF;
+  position: absolute;
+  left: 0;
+  top: 15px;
+}

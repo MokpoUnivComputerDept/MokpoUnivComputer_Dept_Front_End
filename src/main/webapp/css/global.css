@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-inter: Inter;
+    --font-montserrat: Montserrat;
+    --font-noto-sans-kr: "Noto Sans KR";
+  
+    /* font sizes */
+    --font-size-sm-6: 13.6px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-mid-9: 17.9px;
+    --font-size-mini: 15px;
+    --font-size-2xl: 21px;
+    --font-size-mid: 17px;
+    --font-size-lgi-2: 19.2px;
+    --font-size-16xl: 35px;
+    --font-size-9xl: 28px;
+    --font-size-3xl: 22px;
+    --font-size-lg: 18px;
+    --font-size-lgi: 19px;
+    --font-size-mid-2: 17.2px;
+  
+    /* Colors */
+    --color-darkslategray-100: #455568;
+    --color-darkslategray-200: #494a4d;
+    --color-darkslategray-300: #343539;
+    --color-darkslategray-400: #333;
+    --color-darkgray-100: #aaa;
+    --color-darkgray-200: #a5a5a5;
+    --color-darkturquoise: #00c1c8;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-darkslateblue: #014099;
+    --color-gray-100: #222;
+    --color-gray-200: #111;
+    --color-dimgray-100: #666;
+    --color-teal: #007d77;
+    --color-lightseagreen: #26a39e;
+  
+    /* Gaps */
+    --gap-2xl-7: 21.7px;
+    --gap-mini: 15px;
+    --gap-9xs: 4px;
+    --gap-8xs-8: 4.8px;
+    --gap-xl: 20px;
+    --gap-10xl: 29px;
+    --gap-3xl: 22px;
+    --gap-11xl: 30px;
+    --gap-3xs-8: 9.8px;
+  
+    /* Paddings */
+    --padding-5xl: 24px;
+    --padding-140xl: 50px;
+    --padding-20xl: 39px;
+    --padding-60xl: 20px;
+    --padding-12xs: 1px;
+    --padding-smi: 13px;
+    --padding-7xs: 6px;
+    --padding-9xs: 4px;
+    --padding-4xs: 9px;
+    --padding-sm: 14px;
+    --padding-xl: 20px;
+    --padding-mini: 15px;
+    --padding-base: 16px;
+    --padding-11xs: 2px;
+    --padding-26xl: 45px;
+    --padding-30xl: 49px;
+    --padding-3xs: 10px;
+    --padding-19xl: 38px;
+    --padding-11xl: 30px;
+    --padding-12xl: 31px;
+    --padding-17xl: 36px;
+    --padding-61xl: 80px;
+    --padding-21xl: 40px;
+    --padding-16xl: 35px;
+    --padding-9xl-3: 28.3px;
+    --padding-27xl: 46px;
+    --padding-39xl-5: 58.5px;
+  }
+  
