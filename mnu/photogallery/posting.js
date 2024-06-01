@@ -1,6 +1,6 @@
 export function fetchImage(page) {
     document.addEventListener('DOMContentLoaded', function() {
-        fetch('http://localhost:5500/photogallery/index/'+page)   // api 엔드포인트
+        fetch('http://13.124.61.141:8080/photo-gallery/index/'+page)   // api 엔드포인트
             .then(response => response.json())
             .then(data => {
                 const imageGrid = document.getElementById('imageGrid');
@@ -43,15 +43,15 @@ export function fetchImage(page) {
                     author.textContent = item.author;
 
                     // 조회수
-                    const count = document.createElement('div');
-                    count.className = 'count';
-                    count.textContent = item.count;
+                    const view = document.createElement('div');
+                    view.className = 'view';
+                    view.textContent = item.view;
 
                     // 정보 추가
                     infoDiv.appendChild(title);
                     infoDiv.appendChild(date);
                     infoDiv.appendChild(author);
-                    infoDiv.appendChild(count);
+                    infoDiv.appendChild(view);
 
                     // 그리드 아이템에 정보 추가
                     gridItem.appendChild(link);

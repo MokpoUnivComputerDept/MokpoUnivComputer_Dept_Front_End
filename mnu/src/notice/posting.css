@@ -1,0 +1,51 @@
+.posting{
+    display: flex;
+    color: #CB2026;
+    white-space: nowrap;
+    margin: 80px 50px 0px;
+    justify-content: flex-end;
+}
+
+.postingTable{
+    display: flex;
+    margin: 3px 50px 0px;
+    color: black;
+    border-top: 3px solid #18327C;
+    border-bottom: 1px solid #CFCFD1;
+}
+
+.thNumber{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 460px 12px 25px;
+}
+
+.thTitle{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 460px 12px 0px;
+}
+
+.thWriter{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 100px 12px 0px;
+}
+
+.thDate{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 100px 12px 0px;
+}
+
+.thCount{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 100px 12px 0px;
+}
+
+.thFile{
+    font-size: 18px;
+    font-weight: bold;
+}
+

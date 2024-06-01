@@ -30,7 +30,7 @@
     padding: 15px 100px 12px 5px;
 }
 
-.thCount {
+.thView {
     font-size: 17px;
     font-weight: bold;
     padding: 15px 100px 12px 5px;
@@ -94,7 +94,7 @@ th {
     color: #666666;
 }
 
-.tdCount {
+.tdView {
     border-bottom: 1px solid #CFCFD1;
     font-size: 15px;
     text-align: left;

@@ -29,13 +29,19 @@
             </div>
         </div>
 
-        <div id="editor" class="editor"></div>
+        <div id="editorContainer">
+            <div id="editor" class="editor"></div>
+            <div class="btnContainer">
+                <div class="fileBtn">
+                    <input type="file" id="multipartInput">
+                    <button id="multipartInputBtn">파일 업로드</button>
+                </div>
+                <div class="saveBtn">
+                    <button id="save" class="button">저장하기</button>
+                </div>
+            </div>
+        </div>
         
-        <button id="save" class="button">저장하기</button>
-
-        <input type="file" id="multipartInput">
-        <button id="multipartInputBtn">파일 업로드</button>
-
         <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
         <script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight-all.min.js"></script>
         <script src="noticeCreate.js"></script>

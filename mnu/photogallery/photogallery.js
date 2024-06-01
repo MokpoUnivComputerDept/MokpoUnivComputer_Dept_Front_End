@@ -138,6 +138,7 @@ const noData = () => {
     const messageContainer = document.querySelector(".noImage");
 
     if(totalcontent === 0) {
+        console.log("no")
         const noDataDiv = document.createElement("div");
         messageContainer.innerHTML = "<tr><td colspan='6'>게시물이 없습니다.</td></tr>";
         messageContainer.classList.add("noData");
