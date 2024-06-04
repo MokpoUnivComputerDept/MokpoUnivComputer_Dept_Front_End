@@ -4,64 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/curriculum.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script type="text/javascript">   
-        $(document).ready( function() {
-        $("#nav").load("./nav.html");
-        $("#footers").load("./footer.html");
-        $("#temp").load("./temp.html"); 
-        });
-        $(function(){
-            $("html, body").animate({ scrollTop: 0 }, "fast"); 
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-            var buttons = document.querySelectorAll('.pageNavigationBtn');
-
-            buttons.forEach(function(button) {
-                button.addEventListener('click', function() {
-                    var siblingUl = button.nextElementSibling;
-                    if (siblingUl.style.display === 'none' || siblingUl.style.display === '') {
-                        siblingUl.style.display = 'block';
-                    } else {
-                        siblingUl.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // JavaScript to handle scrolling behavior
-        document.addEventListener('DOMContentLoaded', function() {
-            // Scroll to top when the page is loaded
-
-            // Get the wrap_page_func element
-            let myDiv = document.querySelector('.wrap_page_func');
-            let goTop = document.querySelector('.goTop');
-            let lastScrollTop = 0;
-
-            // Add scroll event listener to handle hiding/showing the element
-            window.addEventListener('scroll', function() {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (scrollTop === 0) {
-                    // At the top of the page
-                    myDiv.classList.remove('hidden');
-                    goTop.classList.add('hidden');
-                } else {
-                    // Not at the top of the page
-                    myDiv.classList.add('hidden');
-                    goTop.classList.remove('hidden');
-                }
-
-                lastScrollTop = scrollTop; // Update last scroll position
-            });
-        });
-        goTop.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-    </script>
+    <script type="text/javascript" src="./js/loding.js"></script>
     <title>Document</title>
 </head>
 <body class="sub _responsiveObj sub type_1 page16802 college_templet_04 Desktop _msMain eQ03" cz-shortcut-listen="true">

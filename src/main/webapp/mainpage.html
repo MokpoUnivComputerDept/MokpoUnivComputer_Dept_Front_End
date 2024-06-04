@@ -107,65 +107,6 @@
                                
                                 </div>
                             </div>
-                            <div id="iSldFnctSetup760" class="hidden">
-                                imageSlideSetupSeq=760,cnvrsVe=1,stopTime=3,pcCo=1,cnvrsMth=FADEIN,pcMgWidth=100,isImageNoHandlr=true,isCnvrsHandlr=true,isPlayStopHandlr=true
-                            </div>
-                            <script>
-                                $(document).ready(function() {
-                            
-                                    // 현재페이지번호 / 전체페이지수 //
-                                    $('#slider760').on('init', function(event, slick) {
-                                        $('#wrap-slider760 .numbering > .total').text(slick.slideCount);
-                            
-                                        var txt1 = $('#wrap-slider760 .slick-current .text_1').text();
-                                        var txt2 = $('#wrap-slider760 .slick-current .text_2').text();
-                                        $('.wrap .slogan .text_1').text(txt1);
-                                        $('.wrap .slogan .text_2').text(txt2);
-                            
-                                    });
-                                    $('#slider760').on('afterChange', function(event, slick, currentSlide){
-                                        $('#wrap-slider760 .numbering > .now').text(currentSlide+1);
-                            
-                                        var txt1 = $('#wrap-slider760 .slick-current .text_1').text();
-                                        var txt2 = $('#wrap-slider760 .slick-current .text_2').text();
-                                        $('.wrap .slogan .text_1').text(txt1);
-                                        $('.wrap .slogan .text_2').text(txt2);
-                                    });
-                            
-                                    // slick //
-                                    $("#slider760").slick({
-                                        slidesToShow: 1,
-                                        slidesToScroll: 1,
-                                        dots: true,
-                                        arrows: true,
-                                        autoplay: true,
-                                        autoplaySpeed: 3000,
-                                        speed: 1000,
-                                        infinite: true,
-                                        pauseOnHover: false,
-                                        
-                                            
-                                            fade: true,
-                                        
-                                        cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-                                        appendDots: $('#wrap-slider760 .control .paging'),
-                                        prevArrow: '#wrap-slider760 .prev',
-                                        nextArrow: '#wrap-slider760 .next'
-                                    });
-                            
-                                    $('#wrap-slider760 button.play').on('click', function () {
-                                        $("#slider760").slick("slickPlay");
-                                        $(this).removeClass('on');
-                                        $('#wrap-slider760 button.stop').addClass('on');
-                                    });
-                                    $('#wrap-slider760 button.stop').on('click', function () {
-                                        $("#slider760").slick("slickPause");
-                                        $(this).removeClass('on');
-                                        $('#wrap-slider760 button.play').addClass('on');
-                                    });
-                            
-                                });
-                            </script>
                         </div> 
                     </div> 
                 </div> 
@@ -246,7 +187,7 @@
                             </li>
                             <li>
                                 <div class="title">
-                                    <a href="#this" title=" 학부동향"> 학부동향</a>
+                                    <a href="#this" title=" 학부동향">학부동향</a>
                                 </div>
                               
                                 <div class="list">
@@ -255,6 +196,18 @@
                                   </ul>
                                 </div>
                                 <a href="http://3.37.97.2/cs/community/department-trends" class="more" title=" 학부동향더보기"><span>더보기</span>READ MORE</a>                             
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <a href="#this" title=" 동아리">동아리</a>
+                                </div>
+                              
+                                <div class="list">
+                                    <ul class="wrap_rct_slider">
+                                        <li class="nodata">최근게시물이(가) 없습니다.</li> 
+                                  </ul>
+                                </div>
+                                <a href="http://3.37.97.2/cs/community/club" class="more" title=" 동아리더보기"><span>더보기</span>READ MORE</a>                             
                             </li>
                         </ul>
                     </div>
@@ -447,64 +400,15 @@
     <div id="footers"></div>
     <div id="temp"></div>
     <script>
-        // 모든 메뉴 항목의 DOM 요소를 선택합니다.
-        const menuItems = document.querySelectorAll('.head_navi .li_1');
-
-        // 각 메뉴 항목에 이벤트 리스너를 추가합니다.
-        menuItems.forEach(menuItem => {
-            menuItem.addEventListener('click', function(event) {
-                // 기본 이벤트를 막습니다. 이벤트 전파를 중단합니다.
+        document.querySelectorAll('ul > li > .title > a').forEach(item => {
+            item.addEventListener('click', function(event) {
                 event.preventDefault();
-                event.stopPropagation();
-
-                // 해당 메뉴를 표시합니다.
-                this.style.display = 'block';
-
-                // 해당 메뉴의 하위 메뉴를 표시합니다.
-                const subMenus = this.querySelectorAll('._childDiv');
-
-                subMenus.forEach(subMenu => {
-                    subMenu.style.display = 'block';
+                // 모든 li에서 active 클래스를 제거
+                document.querySelectorAll('ul > li').forEach(li => {
+                    li.classList.remove('active');
                 });
-
-                // 다른 메뉴 항목과 그 하위 메뉴를 표시합니다.
-                menuItems.forEach(otherMenuItem => {
-                    if (otherMenuItem !== this) {
-                        otherMenuItem.style.display = 'block';
-
-                        const otherSubMenus = otherMenuItem.querySelectorAll('._childDiv');
-                        otherSubMenus.forEach(otherSubMenu => {
-                            otherSubMenu.style.display = 'block';
-                        });
-                    }
-                });
-            });
-        });
-        // 하위 메뉴 항목의 DOM 요소를 선택합니다.
-        const subMenuItems = document.querySelectorAll('.head_navi .li_2, .head_navi .li_3');
-
-        // 각 하위 메뉴 항목에 이벤트 리스너를 추가합니다.
-        subMenuItems.forEach(subMenuItem => {
-            subMenuItem.addEventListener('click', function(event) {
-                // 하위 메뉴 항목의 링크로 이동합니다.
-                const link = this.querySelector('a').getAttribute('href');
-                window.location.href = link;
-            });
-        });
-        // area_2를 선택합니다.
-        const area2 = document.querySelector('.area_2');
-
-        // area_2에서 마우스가 벗어났을 때의 이벤트 리스너를 추가합니다.
-        area2.addEventListener('mouseleave', function() {
-            // 모든 메뉴 항목의 DOM 요소를 선택합니다.
-            const menuItems = document.querySelectorAll('.head_navi .li_1');
-
-            // 각 메뉴 항목을 순회하면서 하위 메뉴를 숨깁니다.
-            menuItems.forEach(menuItem => {
-                const subMenus = menuItem.querySelectorAll('._childDiv');
-                subMenus.forEach(subMenu => {
-                    subMenu.style.display = 'none';
-                });
+                // 클릭된 a 요소의 부모 li에 active 클래스 추가
+                this.closest('li').classList.add('active');
             });
         });
     </script>
