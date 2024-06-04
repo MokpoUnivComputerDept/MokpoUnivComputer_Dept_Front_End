@@ -215,7 +215,7 @@ header .area_2::before {
     position: absolute;
     left: 0;
     top: 80px;
-    background: #DDD url(/img/main_back.png) no-repeat left bottom;
+    background: #DDD url(../images/main_back.png) no-repeat left bottom;
     background-size: cover;
 }
 header .area_2 .container::before {
@@ -652,7 +652,7 @@ element.style {
 }
 
 .wrap_visual .item_1 {
-    background:url(/img/main_slide1.jpg) no-repeat center;
+    background:url(../images/main_slide1.jpg) no-repeat center;
 }
 .wrap_visual .text_1 {
     animation-name: text_1;
@@ -716,7 +716,7 @@ element.style {
     height: auto;
 }
 #multipleDiv_college_templet_04_10 {
-    background: #eaeef3 url(img/main_back2.jpg) no-repeat left bottom;
+    background: #eaeef3 url(../images/main_back2.jpg) no-repeat left bottom;
 }
 
 .multipleContentsDiv, .multipleDiv {
@@ -915,7 +915,7 @@ a:link, a:active, a:visited {
     bottom: 0;
     width: 30px;
     height: 30px;
-    background: url(/img/main_plus.png) center no-repeat;
+    background: url(../images/main_plus.png) center no-repeat;
 }
 .slick-track:after {
     clear: both;
@@ -967,7 +967,7 @@ a:link, a:active, a:visited {
     width: 25px;
     height: 25px;
     border: 1px solid #000;
-    background: url(/img/main_plus2.png) no-repeat center;
+    background: url(../images/main_plus2.png) no-repeat center;
     font-size: 0;
     display: block;
 }
@@ -1055,7 +1055,7 @@ img, fieldset, iframe, button {
     font-family: 'S-CoreDream-3Light';
     padding: 5px 0 5px 30px;
     margin-bottom: 10px;
-    background: url(img/main_time.png) left center no-repeat;
+    background: url(../images/main_time.png) left center no-repeat;
 }
 .wrap_photo .dateB {
     display: none;
@@ -1079,7 +1079,7 @@ img, fieldset, iframe, button {
     top: 0;
     width: 25px;
     height: 25px;
-    background: url(img/main_more.png) center no-repeat;
+    background: url(../images/main_more.png) center no-repeat;
 }
 #menu15352_obj35 {
     width: 25%;
@@ -1088,7 +1088,7 @@ img, fieldset, iframe, button {
 }
 .wrap_link_1 {
     padding: 7px;
-    background: url(img/main_bg.png);
+    background: url(../images/main_bg.png);
 }
 
 .wrap_link_1 .inner {
@@ -1145,7 +1145,7 @@ img, fieldset, iframe, button {
     display: block;
     width: 17px;
     height: 16px;
-    background: url(img/main_arrow.png) no-repeat;
+    background: url(../images/main_arrow.png) no-repeat;
 }
 .wrap_link_1 .control {
     display: none;
