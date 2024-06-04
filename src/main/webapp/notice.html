@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/title.css">
+        <link rel="stylesheet" href="./css/search.css">
+        <link rel="stylesheet" href="./css/posting.css">
+        <link rel="stylesheet" href="./css/pagination.css">
+        <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.css">
+        <link rel="stylesheet" href="./css/test.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./js/loding.js"></script>
+    </head>
+
+    <body class="sub _responsiveObj sub type_1 page16810 college_templet_04 Desktop _msMain eQ05" cz-shortcut-listen="true">
+        <div id="nav"></div>
+        <div class="wrap_sub_visual">
+            <a href="http://3.37.97.2/cs/curriculum/computer-engineering" class="prev" target="_self">교과과정</a>
+            <a href="http://3.37.97.2/cs/guide/sitemap" class="next" target="_self">이용안내</a>
+            <div class="container">
+                <p class="visual_intro"><strong>이용안내</strong><span>구성원의 자긍심이 넘치는 행복한 대학</span></p>
+            </div>
+        </div>
+        <!--서브비주얼-->
+    
+        <!--페이지기능-->
+        <div class="wrap_page_func">
+          <div class="container">		
+            <!--SNB-->
+            <div class="sub_navi">
+                <ul>
+                    <li class="home"><a href="http://3.37.97.2">홈으로</a></li>
+                    <li id="pagetitle1"><button class="pageNavigationBtn" title="펼치기">커뮤니티</button><ul class="pageNavigation" style="display: none;"><li><a href="http://3.37.97.2/cs/department/intro" target="_self">학부소개</a></li><li><a href="http://3.37.97.2/cs/major/computer-engineering" target="_self">전공소개</a></li><li><a href="http://3.37.97.2/cs/curriculum/computer-engineering" target="_self">교과과정</a></li><li><a href="http://3.37.97.2/cs/community/notice" target="_self">커뮤니티</a></li><li><a href="http://3.37.97.2/cs/guide/sitemap" target="_self">이용안내</a></li></ul></li>
+                    <li id="pagetitle2"><button class="pageNavigationBtn" title="펼치기">공지사항</button><ul class="pageNavigation" style="display: none;"><li><a href="http://3.37.97.2/cs/community/notice" target="_self">공지사항</a></li><li><a href="http://3.37.97.2/cs/community/department-trends" target="_self">학부동향</a></li><li><a href="http://3.37.97.2/cs/community/photo-gallery" target="_self">포토갤러리</a></li></ul></li>
+                </ul>
+            </div>
+            <!--SNB-->
+          </div>
+        </div>
+        <div class="wrap_contents">
+            <div class="page_title">
+                <h1>공지사항</h1>
+            </div>
+
+            <!--검색박스-->
+            <div class="box">
+                <span class="text">검색하기</span>
+                <select class="comboBox">
+                    <option value="title">제목</option>
+                    <option value="writer">작성자</option>
+                </select>
+                <div class="searchContainer">
+                    <input
+                    type="text"
+                    class="searchBox"
+                    placeholder="검색어를 입력해주세요." />
+
+                    <button class="searchButton">
+                        <ion-icon name="search"></ion-icon>
+                    </button>
+                </div>
+                <button class="textBox" onclick="goToPage()">
+                    글쓰기
+                </button>
+
+                <script>
+                    function goToPage() {
+                        // 이동할 페이지의 URL
+                        var writingPageUrl = "../noticeCreate/noticeCreate.html";
+                        // 현재 페이지를 새로운 URL로 이동
+                        window.location.href = writingPageUrl;
+                    }
+                </script>
+            </div>
+
+            <div class="textContainer">
+                <div class="count"></div>
+                <div class="txt">
+                    ※ 공개글 작성 시 주민등록번호, 외국인등록번호, 운전면허번호, 계좌번호 등 개인정보를 입력하시면 안됩니다.
+                </div>
+            </div>    
+
+            <table class="postingTable">
+                <thead>
+                    <tr>
+                        <th class="thNumber">번호</th>
+                        <th class="thTitle">제목</th>
+                        <th class="thWriter">작성자</th>
+                        <th class="thDate">작성일</th>
+                        <th class="thCount">조회수</th>
+                        <th class="thFile">첨부파일</th>
+                    </tr>
+                </thead>
+
+                <tbody class="posting"> 
+                    <script src="./js/data.js"></script>
+                </tbody>
+            </table>
+
+            <!--페이지네이션-->
+            <article class="article">
+                <ul class="contents"></ul>
+                <div class="buttons"></div>
+            </article>
+        </div>
+        <div id="footers"></div>
+        <div id="temp"></div>
+        <div class="goTop"><a href="#">맨위로</a></div>
+        <script src="./js/searchBox.js"></script>
+        <script src="./js/notice.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

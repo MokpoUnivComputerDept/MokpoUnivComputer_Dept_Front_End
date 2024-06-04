@@ -1,0 +1,46 @@
+.image {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 20px;
+    margin: 20px 50px;
+}
+
+.image-grid  {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+}
+
+.grid-item img{
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.image-info {
+    border: 1px solid #ccc;
+}
+
+.image-info .title {
+    font-weight: bold;
+}
+
+.image-info .date {
+    color:#666666;
+    font-size: 0.9em;
+}
+
+.image-info .author {
+    color:#666666;
+    font-size: 0.9em;
+}
+
+/* 조회수 임시 변수 이름 view */
+.image-info .view {
+    color:#666666;
+    font-size: 0.9em;
+}
