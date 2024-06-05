@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css"/>
+        <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="./css/noticeCreate.css" />
+    </head>
+    
+    <body>
+        <div class="h">
+            <h1>게시글 작성</h1>
+        </div>
+
+        <div class="TtBox">
+            <div class="Tt">
+                제목
+            </div>
+            <input type="text" 
+                   id="title" 
+                   class="title" 
+                   placeholder="제목을 입력하세요"/>
+            <div class="Tt">
+                본문
+            </div>
+        </div>
+
+        <div id="editorContainer">
+            <div id="editor" class="editor"></div>
+            <div class="btnContainer">
+                <div class="form__input--file_wrap">
+                    <input class="form__input--file" id="upload1" type="file" multiple>
+                    <label class="form__label--file" for="upload1">파일선택</label>
+                    <span class="form__span--file">선택된 파일이 없습니다.</span>
+                </div>
+                <div class="saveBtn">
+                    <button id="save" class="button">저장하기</button>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+        <script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight-all.min.js"></script>
+        <script src="./js/noticeCreate.js"></script>
+        
+    </body>
+</html>

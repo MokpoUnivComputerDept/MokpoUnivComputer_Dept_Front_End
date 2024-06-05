@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/trend.css">
+        <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.css">
+    </head>
+    
+    <body>
+        <div>
+            <h1 class="h1">학부동향</h1>
+        </div>
+
+        <div class="textContainer">
+            <div class="count"></div>
+            <div class="txt">
+                ※ 공개글 작성 시 주민등록번호, 외국인등록번호, 운전면허번호, 계좌번호 등 개인정보를 입력하시면 안됩니다.
+            </div>
+        </div>    
+
+        <!--검색박스-->
+        <div class="contents" id="bContents" tabindex="0">
+            <div id="contentsEditHtml">
+                <input type="hidden" id="siteIdVal" value="cs">
+                <div class="contntMaster">
+                    /WEB-INF/jsp/k2web/com/cop/site/layout.jsp<br>
+                    cs_JW_MS_K2WT001_S
+                </div>
+                <input type="hidden" id="pathMenuSeqs" value="15352,16790,16797,16811">
+                <input id="editMode" type="hidden" value="GENERAL">
+                <article  id="_contentBuilder" class="_contentBuilder _k2__WiZaRd_general">
+                    <div class="_obj _objWidget _active" id="menu16811_obj61" style="">
+                        <div class="hidden widgetInfo">
+                            fnctId=profl,fnctNo=501
+                        </div>
+                        <div class="profile _fnctWrap">
+                            <form name="searchForm" method="post" action="/profl/cs/501/artclList.do">
+                                <input type="hidden" name="layout" value="EYLdG8fuGBcwuVbZSqXctA%3D%3D">
+        
+                                <div class="profile-search">
+                                    <div class="form-search">
+                                        <fieldset>
+                                            <legend>게시물 검색</legend>
+                                            <div class="tbl-search">
+                                                <div class="box-title">
+                                                    검색하기
+                                                </div>
+                                                <div class="box-sel">
+                                                    <select id="srchColumn" name="srchColumn" class="_selectBox">
+                                                        <option value="tt">제목</option>
+                                                        <option value="au">작성자</option>
+                                                    </select>
+                                                </div>
+                                                <div class="box-search">
+                                                    <input type="text" id="srchWrd" name="srchWrd" value="" onkeypress="if(event.keyCode == '13') jf_searchArtcl('srchWrd', this.value)" placeholder="검색어를 입력해 주세요.">
+                                                    <input type="submit" value="검색">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="image" id="imageGrid"></div>
+        <div class="noImage" id="noData"></div>
+
+        
+       <!--페이지네이션-->
+       <div class="page">
+        <article class="article">
+            <ul class="contents"></ul>
+            <div class="buttons"></div>
+        </article>
+
+        <div class="noticeCreateBtn">
+            <button class="textBox" onclick="goToPage()">
+                글쓰기
+            </button>
+            <script>
+                function goToPage() {
+                    // 이동할 페이지의 URL
+                    var writingPageUrl = "./noticeCreate.html";
+                    // 현재 페이지를 새로운 URL로 이동
+                    window.location.href = writingPageUrl;
+                }
+            </script>
+        </div> 
+    </div>
+
+        <script src="./js/trendSearchBox.js"></script>
+        <script src="./js/trend.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>   
+</html>

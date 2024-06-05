@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.horizontalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.horizontalImage {
+    width: 250px;
+    height: 200px;
+    border: 1px solid #000000;
+}
+
+.horizontalText {
+    width: 900px;
+    height: 200px;
+    font-size: 20px;
+    margin-left: 100px;
+    border: 1px solid #000000;
+}
+
+.fa-home {
+    color: #333;
+    font-size: 50px;
+    margin-left: 100px;
+}
+
+/* 글씨 */
+.textContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 50px;
+}
+
+/*경고글*/
+.txt {
+    display: flex;
+    color: #CB2026;
+    white-space: nowrap;
+    justify-content: flex-end;
+    margin: 0 50px;
+    margin-top: 50px;
+}
+
+/* 하늘색 */
+.container{
+    display: flex;
+    align-items: center;         /* 수직: 중앙 */
+    justify-content: center;     /* 수평: 중앙 */
+    flex-direction: column;
+    width: flex;
+    height: 200px;
+    margin: 0px 50px;
+    background-color: #F5F6F8;
+}
+
+.department{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+
+.department button{
+    padding: 10px 20px;
+}
+
+/* 검색하기 (글씨) */
+.text{
+    font-size: 20px;
+    font-weight: bold;
+    color: #18327C;
+    margin-right: 40px;
+}
+
+.comboBox{
+    width: 120px;
+    height: 45px;
+    text-indent: 15px;
+    margin-right: 5px;
+}
+
+/* 검색 */
+.searchContainer{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+/* 검색 상자 */
+.searchBox{
+    width: 260px;
+    height: 40px;
+    text-indent: 10px;
+}
+
+.line{
+    display: flex;
+    border-top: 3px solid #18327C;
+    margin: 10px 50px;
+}
+
+.title{
+    text-align: center;    /* 텍스트 가운데 정렬 */
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
