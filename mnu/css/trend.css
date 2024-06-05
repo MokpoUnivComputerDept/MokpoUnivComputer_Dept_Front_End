@@ -1056,3 +1056,7 @@ a:link, a:active, a:visited {
     font-size: 1.2em;
     color: #18327C;
 }
+
+.noImage .hidden{
+    display: none;
+}
